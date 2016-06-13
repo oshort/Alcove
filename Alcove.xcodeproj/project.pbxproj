@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B99C12DD0DFD47B906C895B /* Pods_Alcove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3ED42101A721D07AAE85A7 /* Pods_Alcove.framework */; };
+		7B1A8B101D0F04B800F65380 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1A8B0F1D0F04B800F65380 /* AccountViewController.swift */; };
+		7B1A8B121D0F04CC00F65380 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1A8B111D0F04CC00F65380 /* LoginViewController.swift */; };
+		7B1A8B141D0F058E00F65380 /* MySpotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */; };
 		7BA8274F1D0F031D0054B3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8274E1D0F031D0054B3B1 /* AppDelegate.swift */; };
-		7BA827511D0F031D0054B3B1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA827501D0F031D0054B3B1 /* FirstViewController.swift */; };
-		7BA827531D0F031D0054B3B1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA827521D0F031D0054B3B1 /* SecondViewController.swift */; };
+		7BA827511D0F031D0054B3B1 /* MySpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA827501D0F031D0054B3B1 /* MySpotsViewController.swift */; };
+		7BA827531D0F031D0054B3B1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA827521D0F031D0054B3B1 /* MapViewController.swift */; };
 		7BA827561D0F031D0054B3B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA827541D0F031D0054B3B1 /* Main.storyboard */; };
 		7BA827581D0F031D0054B3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA827571D0F031D0054B3B1 /* Assets.xcassets */; };
 		7BA8275B1D0F031D0054B3B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA827591D0F031D0054B3B1 /* LaunchScreen.storyboard */; };
+		7BA827631D0F03670054B3B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BA827621D0F03670054B3B1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3ED42101A721D07AAE85A7 /* Pods_Alcove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alcove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE1D7CA279055F71A97869B /* Pods-Alcove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alcove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alcove/Pods-Alcove.debug.xcconfig"; sourceTree = "<group>"; };
+		7B1A8B0F1D0F04B800F65380 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		7B1A8B111D0F04CC00F65380 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpotsTableViewCell.swift; sourceTree = "<group>"; };
 		7BA8274B1D0F031D0054B3B1 /* Alcove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA8274E1D0F031D0054B3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BA827501D0F031D0054B3B1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7BA827521D0F031D0054B3B1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7BA827501D0F031D0054B3B1 /* MySpotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotsViewController.swift; sourceTree = "<group>"; };
+		7BA827521D0F031D0054B3B1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7BA827551D0F031D0054B3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BA827571D0F031D0054B3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BA8275A1D0F031D0054B3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BA8275C1D0F031D0054B3B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BA827621D0F03670054B3B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F054A6FA4E479EB5BBAA1C2B /* Pods-Alcove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alcove.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alcove/Pods-Alcove.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B99C12DD0DFD47B906C895B /* Pods_Alcove.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F57E36950EF0C9ABCD3099D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DE1D7CA279055F71A97869B /* Pods-Alcove.debug.xcconfig */,
+				F054A6FA4E479EB5BBAA1C2B /* Pods-Alcove.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7BA827421D0F031D0054B3B1 = {
 			isa = PBXGroup;
 			children = (
 				7BA8274D1D0F031D0054B3B1 /* Alcove */,
 				7BA8274C1D0F031D0054B3B1 /* Products */,
+				1F57E36950EF0C9ABCD3099D /* Pods */,
+				935889E7E6B34F1B35E52229 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +81,26 @@
 			isa = PBXGroup;
 			children = (
 				7BA8274E1D0F031D0054B3B1 /* AppDelegate.swift */,
-				7BA827501D0F031D0054B3B1 /* FirstViewController.swift */,
-				7BA827521D0F031D0054B3B1 /* SecondViewController.swift */,
+				7BA827501D0F031D0054B3B1 /* MySpotsViewController.swift */,
+				7BA827521D0F031D0054B3B1 /* MapViewController.swift */,
+				7B1A8B0F1D0F04B800F65380 /* AccountViewController.swift */,
+				7B1A8B111D0F04CC00F65380 /* LoginViewController.swift */,
+				7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */,
 				7BA827541D0F031D0054B3B1 /* Main.storyboard */,
 				7BA827571D0F031D0054B3B1 /* Assets.xcassets */,
 				7BA827591D0F031D0054B3B1 /* LaunchScreen.storyboard */,
 				7BA8275C1D0F031D0054B3B1 /* Info.plist */,
+				7BA827621D0F03670054B3B1 /* GoogleService-Info.plist */,
 			);
 			path = Alcove;
+			sourceTree = "<group>";
+		};
+		935889E7E6B34F1B35E52229 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A3ED42101A721D07AAE85A7 /* Pods_Alcove.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BA8275F1D0F031D0054B3B1 /* Build configuration list for PBXNativeTarget "Alcove" */;
 			buildPhases = (
+				19BCCB20610D30DAAB2F5593 /* 📦 Check Pods Manifest.lock */,
 				7BA827471D0F031D0054B3B1 /* Sources */,
 				7BA827481D0F031D0054B3B1 /* Frameworks */,
 				7BA827491D0F031D0054B3B1 /* Resources */,
+				8D2759BD805DCB7AB831FCE8 /* 📦 Embed Pods Frameworks */,
+				F90D31BE13F9D80F0E421AC7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,20 +167,72 @@
 			files = (
 				7BA8275B1D0F031D0054B3B1 /* LaunchScreen.storyboard in Resources */,
 				7BA827581D0F031D0054B3B1 /* Assets.xcassets in Resources */,
+				7BA827631D0F03670054B3B1 /* GoogleService-Info.plist in Resources */,
 				7BA827561D0F031D0054B3B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19BCCB20610D30DAAB2F5593 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D2759BD805DCB7AB831FCE8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alcove/Pods-Alcove-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F90D31BE13F9D80F0E421AC7 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alcove/Pods-Alcove-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BA827471D0F031D0054B3B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA827531D0F031D0054B3B1 /* SecondViewController.swift in Sources */,
+				7BA827531D0F031D0054B3B1 /* MapViewController.swift in Sources */,
 				7BA8274F1D0F031D0054B3B1 /* AppDelegate.swift in Sources */,
-				7BA827511D0F031D0054B3B1 /* FirstViewController.swift in Sources */,
+				7B1A8B101D0F04B800F65380 /* AccountViewController.swift in Sources */,
+				7B1A8B141D0F058E00F65380 /* MySpotsTableViewCell.swift in Sources */,
+				7B1A8B121D0F04CC00F65380 /* LoginViewController.swift in Sources */,
+				7BA827511D0F031D0054B3B1 /* MySpotsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +345,7 @@
 		};
 		7BA827601D0F031D0054B3B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE1D7CA279055F71A97869B /* Pods-Alcove.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Alcove/Info.plist;
@@ -265,6 +357,7 @@
 		};
 		7BA827611D0F031D0054B3B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F054A6FA4E479EB5BBAA1C2B /* Pods-Alcove.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Alcove/Info.plist;
@@ -293,6 +386,7 @@
 				7BA827611D0F031D0054B3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
