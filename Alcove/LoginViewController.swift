@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func createAccount(sender: AnyObject) {
-        
         FIRAuth.auth()?.createUserWithEmail(emailTextField.text!, password: passwordTextField.text!, completion: {
             user,error in
             
@@ -40,8 +39,14 @@ class LoginViewController: UIViewController {
         })
     }
     
+    func isValidEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(emailTextField.text)
+    }
+    
      override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
-        if identifier == "loginSegue" && (emailTextField.text == "") || (passwordTextField.text == "") {
+        if identifier == "loginSegue" && (emailTextField.text == "") || (passwordTextField.text == "") || isValidEmail() == false {
                 let emptyAlertViewController = UIAlertController(title: "Login failed", message: "Please enter a valid email and password", preferredStyle: .Alert)
                 let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
                 }
@@ -52,6 +57,7 @@ class LoginViewController: UIViewController {
             }
         return true
         }
+
 
   
     func login() {
