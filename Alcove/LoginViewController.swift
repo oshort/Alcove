@@ -33,12 +33,10 @@ class LoginViewController: UIViewController {
             if error != nil {
                 self.login()
                 
-            } else{
+            } else {
                 print("User Created")
                 self.login()
-                
             }
-            
         })
     }
   
@@ -53,6 +51,6 @@ class LoginViewController: UIViewController {
             }
         })
     }
+    
    
-
 }

@@ -14,7 +14,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--First-->
+        <!--MySpots-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="MySpotsViewController" customModule="Alcove" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,13 +49,13 @@
                             <constraint firstItem="wd0-Mg-wGV" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="vuv-cF-jPq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="MySpots" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--Map-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="MapViewController" customModule="Alcove" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,13 +79,13 @@
                             <constraint firstItem="37q-kx-0Lm" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="jhJ-vU-cUz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Item-->
+        <!--Account-->
         <scene sceneID="GHU-lc-Z0a">
             <objects>
                 <viewController id="Kc6-8m-3Ev" customClass="AccountViewController" customModule="Alcove" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,11 +98,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="hCq-zy-YFT"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="hCq-zy-YFT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCC-oZ-l26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="1205"/>
+            <point key="canvasLocation" x="627" y="1232"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -154,6 +154,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccount:" destination="tzs-eU-vxJ" eventType="touchUpInside" id="g96-5T-NZ4"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" identifier="loginSegue" id="wLK-XM-8yZ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Cf-cB-Ckp">
