@@ -4,7 +4,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Marcellus-Regular.ttf">
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -127,8 +135,52 @@
                     <view key="view" contentMode="scaleToFill" id="Vtj-c4-Qwt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d0s-up-TET">
+                                <rect key="frame" x="150" y="285" width="300" height="30"/>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m1U-cB-Fws">
+                                <rect key="frame" x="150" y="323" width="300" height="30"/>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p85-LQ-CZj">
+                                <rect key="frame" x="150" y="373" width="300" height="31"/>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="15"/>
+                                <state key="normal" title="Login/Create User">
+                                    <color key="titleColor" red="0.086274509803921567" green="0.28627450980392155" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccount:" destination="tzs-eU-vxJ" eventType="touchUpInside" id="g96-5T-NZ4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Cf-cB-Ckp">
+                                <rect key="frame" x="150" y="68" width="300" height="177"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p85-LQ-CZj" firstAttribute="width" secondItem="m1U-cB-Fws" secondAttribute="width" id="58f-iF-Ol7"/>
+                            <constraint firstItem="p85-LQ-CZj" firstAttribute="top" secondItem="m1U-cB-Fws" secondAttribute="bottom" constant="20" id="5Ej-fD-e04"/>
+                            <constraint firstItem="m1U-cB-Fws" firstAttribute="top" secondItem="d0s-up-TET" secondAttribute="bottom" constant="8" id="9Wn-3Z-ztr"/>
+                            <constraint firstItem="2Cf-cB-Ckp" firstAttribute="top" secondItem="6Oc-QO-YBN" secondAttribute="bottom" constant="48" id="QSs-Cw-lz5"/>
+                            <constraint firstItem="m1U-cB-Fws" firstAttribute="centerX" secondItem="Vtj-c4-Qwt" secondAttribute="centerX" id="TqG-Ad-tG6"/>
+                            <constraint firstItem="2Cf-cB-Ckp" firstAttribute="width" secondItem="d0s-up-TET" secondAttribute="width" id="Ylt-Dh-fG6"/>
+                            <constraint firstItem="d0s-up-TET" firstAttribute="centerY" secondItem="Vtj-c4-Qwt" secondAttribute="centerY" id="aCT-Fu-PfB"/>
+                            <constraint firstItem="d0s-up-TET" firstAttribute="top" secondItem="2Cf-cB-Ckp" secondAttribute="bottom" constant="40" id="clw-sa-ivT"/>
+                            <constraint firstItem="p85-LQ-CZj" firstAttribute="centerX" secondItem="Vtj-c4-Qwt" secondAttribute="centerX" id="iHY-zw-gQe"/>
+                            <constraint firstItem="2Cf-cB-Ckp" firstAttribute="centerX" secondItem="Vtj-c4-Qwt" secondAttribute="centerX" id="mvi-Uh-5Wv"/>
+                            <constraint firstItem="m1U-cB-Fws" firstAttribute="width" secondItem="d0s-up-TET" secondAttribute="width" id="nnE-dC-KGT"/>
+                            <constraint firstItem="d0s-up-TET" firstAttribute="centerX" secondItem="Vtj-c4-Qwt" secondAttribute="centerX" id="sSu-eC-jmU"/>
+                            <constraint firstItem="d0s-up-TET" firstAttribute="width" secondItem="Vtj-c4-Qwt" secondAttribute="width" multiplier="0.5" id="tiG-y3-bqG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="d0s-up-TET" id="STX-0B-EJ1"/>
+                        <outlet property="passwordTextField" destination="m1U-cB-Fws" id="dOY-AH-SVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5g2-Xd-00u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,6 +189,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="logo" width="499" height="586"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
