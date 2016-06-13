@@ -40,9 +40,8 @@ class LoginViewController: UIViewController {
         })
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
-        if identifier == "loginSegue"{
-            if ((emailTextField.text?.isEmpty) != nil) || (passwordTextField.text?.isEmpty) != nil  {
+     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+        if identifier == "loginSegue" && (emailTextField.text == "") || (passwordTextField.text == "") {
                 let emptyAlertViewController = UIAlertController(title: "Login failed", message: "Please enter a valid email and password", preferredStyle: .Alert)
                 let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
                 }
@@ -51,9 +50,9 @@ class LoginViewController: UIViewController {
                 
                 return false
             }
-        }
         return true
-    }
+        }
+
   
     func login() {
         FIRAuth.auth()?.signInWithEmail(emailTextField.text!, password: passwordTextField.text!, completion: {
