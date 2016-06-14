@@ -14,7 +14,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--MySpots-->
+        <!--My Spots View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="MySpotsViewController" customModule="Alcove" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,17 +26,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Mg-wGV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Mg-wGV">
                                 <rect key="frame" x="0.0" y="48" width="600" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mySpotsTableViewCell" id="UJF-iE-070" customClass="MySpotsTableViewCell" customModule="Alcove" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mySpotsTableViewCell" rowHeight="94" id="UJF-iE-070" customClass="MySpotsTableViewCell" customModule="Alcove" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJF-iE-070" id="2Xd-l7-xgH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
+                                                    <rect key="frame" x="502" y="8" width="57" height="77"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-J6-Qoo">
+                                                    <rect key="frame" x="8" y="10" width="99" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="top" secondItem="2Xd-l7-xgH" secondAttribute="topMargin" id="32D-MW-XMI"/>
+                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="trailing" secondItem="2Xd-l7-xgH" secondAttribute="trailingMargin" id="PuC-cv-Iau"/>
+                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="centerY" secondItem="2Xd-l7-xgH" secondAttribute="centerY" id="UsW-DW-jIR"/>
+                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="width" secondItem="2Xd-l7-xgH" secondAttribute="width" multiplier="0.1" id="zDQ-99-Csv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="spotTableCellTitleLabel" destination="qOg-J6-Qoo" id="VbE-3L-XRx"/>
+                                            <outlet property="spotTableViewImage" destination="bOX-T9-1Fj" id="Mpy-hI-bOO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -49,11 +75,30 @@
                             <constraint firstItem="wd0-Mg-wGV" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="vuv-cF-jPq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MySpots" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xln-yQ-h9e">
+            <objects>
+                <viewController id="bUI-eJ-uyE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="trF-8Q-EaL"/>
+                        <viewControllerLayoutGuide type="bottom" id="OjK-AF-S6u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fCI-vY-yMx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7aN-5M-33A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xG-kV-s15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2277" y="-320"/>
         </scene>
         <!--Map-->
         <scene sceneID="wg7-f3-ORb">
@@ -79,7 +124,7 @@
                             <constraint firstItem="37q-kx-0Lm" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="jhJ-vU-cUz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Image" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="hCq-zy-YFT"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="account" id="hCq-zy-YFT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCC-oZ-l26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,17 +225,36 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="d0s-up-TET" id="STX-0B-EJ1"/>
+                        <outlet property="loginButton" destination="p85-LQ-CZj" id="WHK-nC-hrG"/>
                         <outlet property="passwordTextField" destination="m1U-cB-Fws" id="dOY-AH-SVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5g2-Xd-00u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662" y="33"/>
+            <point key="canvasLocation" x="-754" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5S5-Gb-jR8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eXD-mj-K2P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Al8-7U-jTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bUI-eJ-uyE" kind="relationship" relationship="rootViewController" id="ZaD-23-6cK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlq-Rk-WQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="-320"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="Image" width="29" height="29"/>
+        <image name="account" width="29" height="29"/>
         <image name="logo" width="499" height="586"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

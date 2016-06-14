@@ -12,11 +12,13 @@ import Firebase
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      //  loginButton.titleLabel?.font = UIFont.boldSystemFontOfSize(15)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +26,15 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+// Check to see if what is entered into the emailTextField is a valid email address
+    
+    func isValidEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(emailTextField.text)
+    }
+    
+// Create an account if one does not already exist using Firebase authentication
 
     @IBAction func createAccount(sender: AnyObject) {
         FIRAuth.auth()?.createUserWithEmail(emailTextField.text!, password: passwordTextField.text!, completion: {
@@ -39,26 +50,7 @@ class LoginViewController: UIViewController {
         })
     }
     
-    func isValidEmail() -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluateWithObject(emailTextField.text)
-    }
-    
-     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
-        if identifier == "loginSegue" && (emailTextField.text == "") || (passwordTextField.text == "") || isValidEmail() == false {
-                let emptyAlertViewController = UIAlertController(title: "Login failed", message: "Please enter a valid email and password", preferredStyle: .Alert)
-                let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
-                }
-                emptyAlertViewController.addAction(okAction)
-                self.presentViewController(emptyAlertViewController, animated: true, completion: nil)
-                
-                return false
-            }
-        return true
-        }
-
-
+//Login to the application via Firebase if the email address is a valid user
   
     func login() {
         FIRAuth.auth()?.signInWithEmail(emailTextField.text!, password: passwordTextField.text!, completion: {
@@ -73,7 +65,18 @@ class LoginViewController: UIViewController {
         })
     }
     
+// Perform a segue if the login is successful
     
-    
-   
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+        if identifier == "loginSegue" && (emailTextField.text == "") || (passwordTextField.text == "") || isValidEmail() == false {
+            let invalidAlertViewController = UIAlertController(title: "Login failed", message: "Please enter a valid email and password", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            }
+            invalidAlertViewController.addAction(okAction)
+            self.presentViewController(invalidAlertViewController, animated: true, completion: nil)
+            
+            return false
+        }
+        return true
+    }
 }

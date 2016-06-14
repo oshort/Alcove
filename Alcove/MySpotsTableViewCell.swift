@@ -8,8 +8,22 @@
 
 import UIKit
 
+@IBDesignable
 class MySpotsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var spotTableCellTitleLabel: UILabel!
+    @IBOutlet weak var spotTableViewImage: UIImageView!
+    
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+            if let localImageView = spotTableViewImage {
+                localImageView.layer.cornerRadius = cornerRadius
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
