@@ -10,8 +10,12 @@ import UIKit
 
 class MySpotsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var spotTableCellTitleLabel: UILabel!
+//Custom TableViewCellOutlets
+    
     @IBOutlet weak var spotTableViewImage: UIImageView!
+    @IBOutlet weak var spotTableViewCellTitleLabel: UILabel!
+    @IBOutlet weak var spotTableViewCellDistanceLabel: UILabel!
+    @IBOutlet weak var spotTableViewCellTypeLabel: UILabel!
   
     
     override func awakeFromNib() {

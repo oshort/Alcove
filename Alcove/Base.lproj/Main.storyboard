@@ -12,6 +12,8 @@
             <string>Marcellus-Regular</string>
             <string>Marcellus-Regular</string>
             <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -28,8 +30,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Mg-wGV">
-                                <rect key="frame" x="0.0" y="48" width="600" height="503"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="479" id="KQ4-00-dVt"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mySpotsTableViewCell" rowHeight="94" id="UJF-iE-070" customClass="MySpotsTableViewCell" customModule="Alcove" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="94"/>
@@ -39,42 +44,71 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
-                                                    <rect key="frame" x="502" y="8" width="57" height="77"/>
+                                                    <rect key="frame" x="460" y="8" width="99" height="77"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starbucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-J6-Qoo">
-                                                    <rect key="frame" x="8" y="10" width="99" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-J6-Qoo">
+                                                    <rect key="frame" x="8" y="8" width="73" height="22"/>
                                                     <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0 miles away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMG-AV-CXg">
+                                                    <rect key="frame" x="8" y="33" width="91" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91T-oG-uzH">
+                                                    <rect key="frame" x="8" y="59" width="77" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="top" secondItem="2Xd-l7-xgH" secondAttribute="topMargin" id="32D-MW-XMI"/>
-                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="trailing" secondItem="2Xd-l7-xgH" secondAttribute="trailingMargin" id="PuC-cv-Iau"/>
-                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="centerY" secondItem="2Xd-l7-xgH" secondAttribute="centerY" id="UsW-DW-jIR"/>
-                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="width" secondItem="2Xd-l7-xgH" secondAttribute="width" multiplier="0.1" id="zDQ-99-Csv"/>
+                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="trailing" secondItem="2Xd-l7-xgH" secondAttribute="trailingMargin" id="3sf-tI-gMl"/>
+                                                <constraint firstItem="91T-oG-uzH" firstAttribute="top" secondItem="hMG-AV-CXg" secondAttribute="bottom" constant="8" id="6bs-Ay-vPa"/>
+                                                <constraint firstItem="qOg-J6-Qoo" firstAttribute="top" secondItem="2Xd-l7-xgH" secondAttribute="topMargin" id="HUH-21-0MD"/>
+                                                <constraint firstItem="qOg-J6-Qoo" firstAttribute="leading" secondItem="2Xd-l7-xgH" secondAttribute="leadingMargin" id="JYF-rQ-Een"/>
+                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="centerY" secondItem="2Xd-l7-xgH" secondAttribute="centerY" id="NFA-28-klk"/>
+                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="top" secondItem="2Xd-l7-xgH" secondAttribute="topMargin" id="ULO-Lc-6r8"/>
+                                                <constraint firstItem="bOX-T9-1Fj" firstAttribute="width" secondItem="2Xd-l7-xgH" secondAttribute="width" multiplier="0.175" id="cBd-sg-Vqp"/>
+                                                <constraint firstItem="hMG-AV-CXg" firstAttribute="top" secondItem="qOg-J6-Qoo" secondAttribute="bottom" constant="3" id="p7f-Q0-8YC"/>
+                                                <constraint firstItem="91T-oG-uzH" firstAttribute="leading" secondItem="2Xd-l7-xgH" secondAttribute="leadingMargin" id="ubC-s2-4MA"/>
+                                                <constraint firstItem="hMG-AV-CXg" firstAttribute="leading" secondItem="2Xd-l7-xgH" secondAttribute="leadingMargin" id="vCB-2y-du7"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="spotTableCellTitleLabel" destination="qOg-J6-Qoo" id="VbE-3L-XRx"/>
+                                            <outlet property="spotTableViewCellDistanceLabel" destination="hMG-AV-CXg" id="Uue-Vc-G3C"/>
+                                            <outlet property="spotTableViewCellTitleLabel" destination="qOg-J6-Qoo" id="evl-O9-ty0"/>
+                                            <outlet property="spotTableViewCellTypeLabel" destination="91T-oG-uzH" id="RfO-n2-ZD5"/>
                                             <outlet property="spotTableViewImage" destination="bOX-T9-1Fj" id="Mpy-hI-bOO"/>
                                             <segue destination="eXD-mj-K2P" kind="show" id="JOo-Tc-hFO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbV-cu-OPy">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="MySpots" id="zZb-rM-kgm">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8fJ-sU-TwR"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="1WD-Xx-ulO"/>
-                            <constraint firstAttribute="trailing" secondItem="wd0-Mg-wGV" secondAttribute="trailing" id="9OP-2R-Eor"/>
-                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="t7e-kc-piE"/>
-                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="vuv-cF-jPq"/>
+                            <constraint firstItem="fbV-cu-OPy" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="3dH-LF-0Em"/>
+                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="3pc-9r-kjI"/>
+                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="top" secondItem="fbV-cu-OPy" secondAttribute="bottom" id="92t-XA-yoW"/>
+                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="Evc-PR-gpX"/>
+                            <constraint firstItem="fbV-cu-OPy" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cLY-gs-chd"/>
+                            <constraint firstItem="fbV-cu-OPy" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="sia-Ou-o4l"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="acW-dT-cKf"/>
