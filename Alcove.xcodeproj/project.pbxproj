@@ -13,6 +13,7 @@
 		7B1A8B141D0F058E00F65380 /* MySpotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */; };
 		7B1A8B161D0F061E00F65380 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1A8B151D0F061E00F65380 /* MapKit.framework */; };
 		7B1A8B181D0F0F3A00F65380 /* Marcellus-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B1A8B171D0F0F3A00F65380 /* Marcellus-Regular.ttf */; };
+		7B8ECB871D117DD4003D45A0 /* MySpotsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8ECB861D117DD4003D45A0 /* MySpotsDetailViewController.swift */; };
 		7BA8274F1D0F031D0054B3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8274E1D0F031D0054B3B1 /* AppDelegate.swift */; };
 		7BA827511D0F031D0054B3B1 /* MySpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA827501D0F031D0054B3B1 /* MySpotsViewController.swift */; };
 		7BA827531D0F031D0054B3B1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA827521D0F031D0054B3B1 /* MapViewController.swift */; };
@@ -30,6 +31,7 @@
 		7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpotsTableViewCell.swift; sourceTree = "<group>"; };
 		7B1A8B151D0F061E00F65380 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7B1A8B171D0F0F3A00F65380 /* Marcellus-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marcellus-Regular.ttf"; sourceTree = "<group>"; };
+		7B8ECB861D117DD4003D45A0 /* MySpotsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpotsDetailViewController.swift; sourceTree = "<group>"; };
 		7BA8274B1D0F031D0054B3B1 /* Alcove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA8274E1D0F031D0054B3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BA827501D0F031D0054B3B1 /* MySpotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotsViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				7BA827521D0F031D0054B3B1 /* MapViewController.swift */,
 				7B1A8B0F1D0F04B800F65380 /* AccountViewController.swift */,
 				7B1A8B111D0F04CC00F65380 /* LoginViewController.swift */,
+				7B8ECB861D117DD4003D45A0 /* MySpotsDetailViewController.swift */,
 				7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */,
 				7BA827541D0F031D0054B3B1 /* Main.storyboard */,
 				7BA827571D0F031D0054B3B1 /* Assets.xcassets */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BA827531D0F031D0054B3B1 /* MapViewController.swift in Sources */,
+				7B8ECB871D117DD4003D45A0 /* MySpotsDetailViewController.swift in Sources */,
 				7BA8274F1D0F031D0054B3B1 /* AppDelegate.swift in Sources */,
 				7B1A8B101D0F04B800F65380 /* AccountViewController.swift in Sources */,
 				7B1A8B141D0F058E00F65380 /* MySpotsTableViewCell.swift in Sources */,

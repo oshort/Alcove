@@ -11,6 +11,7 @@
             <string>Marcellus-Regular</string>
             <string>Marcellus-Regular</string>
             <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -40,10 +41,9 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
                                                     <rect key="frame" x="502" y="8" width="57" height="77"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-J6-Qoo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starbucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-J6-Qoo">
                                                     <rect key="frame" x="8" y="10" width="99" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -54,14 +54,16 @@
                                                 <constraint firstItem="bOX-T9-1Fj" firstAttribute="width" secondItem="2Xd-l7-xgH" secondAttribute="width" multiplier="0.1" id="zDQ-99-Csv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="spotTableCellTitleLabel" destination="qOg-J6-Qoo" id="VbE-3L-XRx"/>
                                             <outlet property="spotTableViewImage" destination="bOX-T9-1Fj" id="Mpy-hI-bOO"/>
+                                            <segue destination="eXD-mj-K2P" kind="show" id="JOo-Tc-hFO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -81,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--My Spots Detail View Controller-->
         <scene sceneID="xln-yQ-h9e">
             <objects>
-                <viewController id="bUI-eJ-uyE" sceneMemberID="viewController">
+                <viewController id="bUI-eJ-uyE" customClass="MySpotsDetailViewController" customModule="Alcove" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="trF-8Q-EaL"/>
                         <viewControllerLayoutGuide type="bottom" id="OjK-AF-S6u"/>

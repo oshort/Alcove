@@ -8,25 +8,19 @@
 
 import UIKit
 
-@IBDesignable
 class MySpotsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var spotTableCellTitleLabel: UILabel!
     @IBOutlet weak var spotTableViewImage: UIImageView!
-    
-    @IBInspectable var cornerRadius: CGFloat = 0 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-            layer.masksToBounds = cornerRadius > 0
-            if let localImageView = spotTableViewImage {
-                localImageView.layer.cornerRadius = cornerRadius
-            }
-        }
-    }
+  
     
     override func awakeFromNib() {
+        
+// Set the corner radius for the spot image view
         super.awakeFromNib()
-        // Initialization code
+        self.spotTableViewImage.layer.cornerRadius = self.spotTableViewImage.frame.size.width / 2
+        self.spotTableViewImage.clipsToBounds = true
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
