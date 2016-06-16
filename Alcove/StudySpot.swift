@@ -14,9 +14,11 @@ import CoreLocation
 
 struct StudySpot: Decodable, Glossy {
     var id: String?
+    var name: String?
     var address: String?
+    var type: String?
     var location: CLLocationCoordinate2D
-//    var annotation = Annotation?
+    var annotation: Annotation?
     var wifi: Bool?
     var coffee: Bool?
     var groupSpace: Bool?
@@ -24,11 +26,15 @@ struct StudySpot: Decodable, Glossy {
     
     init?(json: JSON) {
         id = "id" <~~ json
+        name = "name" <~~ json
         address = "address" <~~ json
+        type = "type" <~~ json
         location = CLLocationCoordinate2DMake(("latitude" <~~ json)!, ("longitude" <~~ json)!)
+        annotation = Annotation(title: "MySpot", subtitle: address, coordinate: location, id: id)
         photos = "photos" <~~ json
         wifi = "wifi" <~~ json
         coffee = "coffee" <~~ json
+        groupSpace = "groupSpace" <~~ json
     }
     
     func toJSON() -> JSON? {

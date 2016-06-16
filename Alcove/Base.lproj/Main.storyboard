@@ -26,7 +26,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Mg-wGV">
@@ -94,9 +94,16 @@
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbV-cu-OPy">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <color key="barTintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="18"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="MySpots" id="zZb-rM-kgm">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8fJ-sU-TwR"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8fJ-sU-TwR">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -126,15 +133,28 @@
                         <viewControllerLayoutGuide type="bottom" id="OjK-AF-S6u"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fCI-vY-yMx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ndk-HD-IoY">
+                                <rect key="frame" x="0.0" y="64" width="600" height="182"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ndk-HD-IoY" secondAttribute="trailing" constant="-20" id="2p7-75-PEn"/>
+                            <constraint firstItem="Ndk-HD-IoY" firstAttribute="top" secondItem="trF-8Q-EaL" secondAttribute="bottom" id="Fih-OR-KAC"/>
+                            <constraint firstItem="Ndk-HD-IoY" firstAttribute="width" secondItem="fCI-vY-yMx" secondAttribute="width" id="Qjt-nI-E15"/>
+                            <constraint firstItem="Ndk-HD-IoY" firstAttribute="height" secondItem="fCI-vY-yMx" secondAttribute="height" multiplier="0.33" id="WOg-KN-ec3"/>
+                            <constraint firstItem="Ndk-HD-IoY" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" constant="-20" id="hlq-2l-5yq"/>
+                            <constraint firstItem="Ndk-HD-IoY" firstAttribute="centerX" secondItem="fCI-vY-yMx" secondAttribute="centerX" id="jdH-WQ-XvX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7aN-5M-33A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xG-kV-s15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2277" y="-320"/>
+            <point key="canvasLocation" x="2512" y="-346"/>
         </scene>
         <!--Map-->
         <scene sceneID="wg7-f3-ORb">
@@ -145,19 +165,35 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="37q-kx-0Lm">
-                                <rect key="frame" x="20" y="58" width="560" height="485"/>
+                                <rect key="frame" x="20" y="72" width="560" height="471"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-Vj-aXd">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <color key="barTintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="18"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Find your Alcove" id="mYc-SV-Erc"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="37q-kx-0Lm" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="4gZ-b6-98E"/>
-                            <constraint firstItem="37q-kx-0Lm" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="fkj-63-dfX"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="37q-kx-0Lm" secondAttribute="bottom" constant="8" symbolic="YES" id="gSa-2Z-qmm"/>
-                            <constraint firstItem="37q-kx-0Lm" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="jhJ-vU-cUz"/>
+                            <constraint firstItem="qf7-Vj-aXd" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="KG2-sV-aEO"/>
+                            <constraint firstItem="qf7-Vj-aXd" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="MtV-QB-Iq6"/>
+                            <constraint firstItem="qf7-Vj-aXd" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="PGM-Z9-tS5"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="37q-kx-0Lm" secondAttribute="bottom" constant="8" symbolic="YES" id="PM2-HH-s4I"/>
+                            <constraint firstItem="qf7-Vj-aXd" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="Pzt-wd-TQ5"/>
+                            <constraint firstItem="37q-kx-0Lm" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="RgG-NT-cG6"/>
+                            <constraint firstItem="37q-kx-0Lm" firstAttribute="top" secondItem="qf7-Vj-aXd" secondAttribute="bottom" id="WWI-Mr-zFb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qf7-Vj-aXd" secondAttribute="trailing" constant="-20" id="hEO-EQ-jS9"/>
+                            <constraint firstItem="37q-kx-0Lm" firstAttribute="centerX" secondItem="qf7-Vj-aXd" secondAttribute="centerX" id="tAs-1O-dWC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Image" id="cPa-gy-q4n"/>
@@ -175,7 +211,7 @@
                         <viewControllerLayoutGuide type="bottom" id="maS-w8-Feg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8L2-1I-XsC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -190,10 +226,12 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>

@@ -9,6 +9,8 @@ target 'Alcove' do
 
 pod 'Firebase'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
 pod 'Gloss', '~> 0.7'
 
 end
