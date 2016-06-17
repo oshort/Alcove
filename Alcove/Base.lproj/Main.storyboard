@@ -14,6 +14,12 @@
             <string>Marcellus-Regular</string>
             <string>Marcellus-Regular</string>
             <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -146,24 +152,159 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ndk-HD-IoY">
                                 <rect key="frame" x="0.0" y="64" width="600" height="182"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgw-NR-a5X" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="120" y="276" width="111" height="74"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24B-Tw-0EZ" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="20" y="254" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="CQC-dy-dgz"/>
+                                    <constraint firstAttribute="height" constant="60" id="Cnu-c9-iLY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="0.78903317449999999" green="0.1806175411" blue="0.16475954649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusBadge">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacityBadge">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetBadge">
+                                        <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </view>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qET-9S-wqy" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="88" y="254" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="01j-wK-UtG"/>
+                                    <constraint firstAttribute="width" constant="60" id="bu6-qH-adB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusBadge">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacityBadge">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetBadge">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBV-GS-gc4" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="156" y="254" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="V4i-6x-HeQ"/>
+                                    <constraint firstAttribute="width" constant="60" id="fnC-e8-5Y9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusBadge">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacityBadge">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetBadge">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ukS-bb-tN4" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="224" y="254" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0o9-Ec-d2D"/>
+                                    <constraint firstAttribute="height" constant="60" id="gc4-tM-RcY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusBadge">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacityBadge">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetBadge">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mo-hk-pfG">
+                                <rect key="frame" x="20" y="322" width="94" height="22"/>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haQ-h7-lgZ">
+                                <rect key="frame" x="20" y="352" width="105" height="22"/>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Ndk-HD-IoY" secondAttribute="trailing" constant="-20" id="2p7-75-PEn"/>
+                            <constraint firstItem="haQ-h7-lgZ" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" id="34j-ts-f1L"/>
+                            <constraint firstItem="ukS-bb-tN4" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="4M4-nd-qGz"/>
+                            <constraint firstItem="sBV-GS-gc4" firstAttribute="leading" secondItem="qET-9S-wqy" secondAttribute="trailing" constant="8" id="5D1-RD-d72"/>
+                            <constraint firstItem="sBV-GS-gc4" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="7I9-c5-FWx"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="top" secondItem="trF-8Q-EaL" secondAttribute="bottom" id="Fih-OR-KAC"/>
+                            <constraint firstItem="ukS-bb-tN4" firstAttribute="leading" secondItem="sBV-GS-gc4" secondAttribute="trailing" constant="8" id="Hvh-7W-W2w"/>
+                            <constraint firstItem="24B-Tw-0EZ" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="N1e-5l-fFL"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="width" secondItem="fCI-vY-yMx" secondAttribute="width" id="Qjt-nI-E15"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="height" secondItem="fCI-vY-yMx" secondAttribute="height" multiplier="0.33" id="WOg-KN-ec3"/>
+                            <constraint firstItem="24B-Tw-0EZ" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" id="ZCs-3j-A3E"/>
+                            <constraint firstItem="qET-9S-wqy" firstAttribute="leading" secondItem="24B-Tw-0EZ" secondAttribute="trailing" constant="8" id="Zpd-JF-C5u"/>
+                            <constraint firstItem="0Mo-hk-pfG" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" id="cTq-sp-U3u"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" constant="-20" id="hlq-2l-5yq"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="centerX" secondItem="fCI-vY-yMx" secondAttribute="centerX" id="jdH-WQ-XvX"/>
+                            <constraint firstItem="qET-9S-wqy" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="nDy-FP-6km"/>
+                            <constraint firstItem="haQ-h7-lgZ" firstAttribute="top" secondItem="0Mo-hk-pfG" secondAttribute="bottom" constant="8" id="r18-RZ-9mr"/>
+                            <constraint firstItem="0Mo-hk-pfG" firstAttribute="top" secondItem="sBV-GS-gc4" secondAttribute="bottom" constant="8" id="x7f-Az-cK3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7aN-5M-33A"/>

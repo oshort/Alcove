@@ -22,10 +22,10 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
             print("view loaded!")
+            callSpotsData()
             ref.observeEventType(.Value) { (snapshot) in
                 print(snapshot.value!)
         }
-        callSpotsData()        
 }
 
     override func didReceiveMemoryWarning() {
@@ -43,12 +43,14 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
 //MARK: Data Retrieval Func
+    
     func callSpotsData(){
         DataService.dataService.studySpotsRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
-            if let responseDict = snapshot.value as? [String:[String:JSON]] {
+            if let responseDict = snapshot.value as? [String:AnyObject] {
+                
                 var objArray = [StudySpot]()
                 for item in responseDict.keys {
-                    objArray.append(StudySpot(json: responseDict[item]!)!)
+                    objArray.append(StudySpot(json: (responseDict[item] as! JSON) )!)
                 }
                 self.objects = objArray
                 dispatch_async(dispatch_get_main_queue(), {
@@ -77,5 +79,6 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Return false if you do not want the specified item to be editable.
         return true
     }
+
 }
 

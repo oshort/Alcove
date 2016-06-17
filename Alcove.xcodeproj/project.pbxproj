@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B99C12DD0DFD47B906C895B /* Pods_Alcove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3ED42101A721D07AAE85A7 /* Pods_Alcove.framework */; };
-		7B0817651D1456FE00D66F0A /* AlcoveBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0817641D1456FE00D66F0A /* AlcoveBadge.swift */; };
+		7B0817691D14698D00D66F0A /* AlcoveBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0817681D14698D00D66F0A /* AlcoveBadge.swift */; };
 		7B1A8B101D0F04B800F65380 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1A8B0F1D0F04B800F65380 /* AccountViewController.swift */; };
 		7B1A8B121D0F04CC00F65380 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1A8B111D0F04CC00F65380 /* LoginViewController.swift */; };
 		7B1A8B141D0F058E00F65380 /* MySpotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */; };
@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		1A3ED42101A721D07AAE85A7 /* Pods_Alcove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alcove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE1D7CA279055F71A97869B /* Pods-Alcove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alcove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alcove/Pods-Alcove.debug.xcconfig"; sourceTree = "<group>"; };
-		7B0817641D1456FE00D66F0A /* AlcoveBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoveBadge.swift; sourceTree = "<group>"; };
+		7B0817681D14698D00D66F0A /* AlcoveBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoveBadge.swift; sourceTree = "<group>"; };
 		7B1A8B0F1D0F04B800F65380 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7B1A8B111D0F04CC00F65380 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpotsTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 		7B6FB7861D11C41100D06385 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7B0817641D1456FE00D66F0A /* AlcoveBadge.swift */,
 				7B1A8B131D0F058E00F65380 /* MySpotsTableViewCell.swift */,
+				7B0817681D14698D00D66F0A /* AlcoveBadge.swift */,
 				7B8ECB861D117DD4003D45A0 /* MySpotsDetailViewController.swift */,
 			);
 			name = Views;
@@ -276,7 +276,7 @@
 			files = (
 				7BA827531D0F031D0054B3B1 /* MapViewController.swift in Sources */,
 				7B6FB7831D11A56E00D06385 /* StudySpot.swift in Sources */,
-				7B0817651D1456FE00D66F0A /* AlcoveBadge.swift in Sources */,
+				7B0817691D14698D00D66F0A /* AlcoveBadge.swift in Sources */,
 				7B8ECB871D117DD4003D45A0 /* MySpotsDetailViewController.swift in Sources */,
 				7BA8274F1D0F031D0054B3B1 /* AppDelegate.swift in Sources */,
 				7B1A8B101D0F04B800F65380 /* AccountViewController.swift in Sources */,
