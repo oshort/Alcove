@@ -7,30 +7,75 @@
 //
 
 import UIKit
+import MapKit
+import Firebase
+import Gloss
 
-class MySpotsViewController: UIViewController {
 
+class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    var ref = FIRDatabase.database().reference().child("studyspots/asdlkjf/address")
+    @IBOutlet weak var spotsTableView: UITableView!
+    
+    var objects = [StudySpot]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+            print("view loaded!")
+            ref.observeEventType(.Value) { (snapshot) in
+                print(snapshot.value!)
+        }
+        callSpotsData()        
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+             }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        DataService.dataService.studySpotsRef.removeAllObservers()
+    }
 
-//Configure our MySpotsTableView
+//MARK: Data Retrieval Func
+    func callSpotsData(){
+        DataService.dataService.studySpotsRef.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            if let responseDict = snapshot.value as? [String:[String:JSON]] {
+                var objArray = [StudySpot]()
+                for item in responseDict.keys {
+                    objArray.append(StudySpot(json: responseDict[item]!)!)
+                }
+                self.objects = objArray
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.spotsTableView.reloadData()
+                })
+            }
+        })
+    }
+
+//MARK: TableView
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return objects.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("swimmerTableViewCell", forIndexPath: indexPath) as? MySpotsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("mySpotsTableViewCell", forIndexPath: indexPath) as? MySpotsTableViewCell
+        
+        cell?.spotTableViewCellTitleLabel.text = (self.objects[indexPath.row]).name
+        cell?.spotTableViewCellTypeLabel.text = (self.objects[indexPath.row]).type
         
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
     }
 }
 

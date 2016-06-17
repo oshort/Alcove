@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tzs-eU-vxJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tzs-eU-vxJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -84,13 +84,17 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="spotTableViewCellDistanceLabel" destination="hMG-AV-CXg" id="Uue-Vc-G3C"/>
-                                            <outlet property="spotTableViewCellTitleLabel" destination="qOg-J6-Qoo" id="evl-O9-ty0"/>
+                                            <outlet property="spotTableViewCellTitleLabel" destination="qOg-J6-Qoo" id="4k0-dM-wSO"/>
                                             <outlet property="spotTableViewCellTypeLabel" destination="91T-oG-uzH" id="RfO-n2-ZD5"/>
                                             <outlet property="spotTableViewImage" destination="bOX-T9-1Fj" id="Mpy-hI-bOO"/>
                                             <segue destination="eXD-mj-K2P" kind="show" id="JOo-Tc-hFO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="plE-9f-90Q"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="vXy-yJ-Q0F"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbV-cu-OPy">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -119,6 +123,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="spotsTableView" destination="wd0-Mg-wGV" id="wJ7-3h-047"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +146,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ndk-HD-IoY">
                                 <rect key="frame" x="0.0" y="64" width="600" height="182"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgw-NR-a5X" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="120" y="276" width="111" height="74"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="0.78903317449999999" green="0.1806175411" blue="0.16475954649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -169,7 +185,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="37q-kx-0Lm">
-                                <rect key="frame" x="20" y="72" width="560" height="471"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="471"/>
                             </mapView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-Vj-aXd">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -185,18 +201,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="37q-kx-0Lm" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="2dt-eZ-Eq0"/>
                             <constraint firstItem="qf7-Vj-aXd" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="KG2-sV-aEO"/>
                             <constraint firstItem="qf7-Vj-aXd" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="MtV-QB-Iq6"/>
                             <constraint firstItem="qf7-Vj-aXd" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="PGM-Z9-tS5"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="37q-kx-0Lm" secondAttribute="bottom" constant="8" symbolic="YES" id="PM2-HH-s4I"/>
                             <constraint firstItem="qf7-Vj-aXd" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="Pzt-wd-TQ5"/>
-                            <constraint firstItem="37q-kx-0Lm" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="RgG-NT-cG6"/>
                             <constraint firstItem="37q-kx-0Lm" firstAttribute="top" secondItem="qf7-Vj-aXd" secondAttribute="bottom" id="WWI-Mr-zFb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qf7-Vj-aXd" secondAttribute="trailing" constant="-20" id="hEO-EQ-jS9"/>
                             <constraint firstItem="37q-kx-0Lm" firstAttribute="centerX" secondItem="qf7-Vj-aXd" secondAttribute="centerX" id="tAs-1O-dWC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Image" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="mapView" destination="37q-kx-0Lm" id="sL5-F9-buz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +248,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>

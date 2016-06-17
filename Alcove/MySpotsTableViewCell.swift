@@ -10,21 +10,20 @@ import UIKit
 
 class MySpotsTableViewCell: UITableViewCell {
 
-//Custom TableViewCellOutlets
+//MARK: TableViewCellOutlets
     
     @IBOutlet weak var spotTableViewImage: UIImageView!
-    @IBOutlet weak var spotTableViewCellTitleLabel: UILabel!
     @IBOutlet weak var spotTableViewCellDistanceLabel: UILabel!
     @IBOutlet weak var spotTableViewCellTypeLabel: UILabel!
+    @IBOutlet weak var spotTableViewCellTitleLabel: UILabel!
   
     
     override func awakeFromNib() {
         
 // Set the corner radius for the spot image view
         super.awakeFromNib()
-        self.spotTableViewImage.layer.cornerRadius = self.spotTableViewImage.frame.size.width / 2
-        self.spotTableViewImage.clipsToBounds = true
-        
+//        self.spotTableViewImage.layer.cornerRadius = self.spotTableViewImage.frame.size.width / 2
+//        self.spotTableViewImage.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

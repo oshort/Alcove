@@ -18,10 +18,9 @@ struct StudySpot: Decodable, Glossy {
     var address: String?
     var type: String?
     var location: CLLocationCoordinate2D
-    var annotation: Annotation?
-    var wifi: Bool?
-    var coffee: Bool?
-    var groupSpace: Bool?
+//    var wifi: Bool?
+//    var coffee: Bool?
+//    var groupSpace: Bool?
     var photos: [String]?
     
     init?(json: JSON) {
@@ -30,11 +29,10 @@ struct StudySpot: Decodable, Glossy {
         address = "address" <~~ json
         type = "type" <~~ json
         location = CLLocationCoordinate2DMake(("latitude" <~~ json)!, ("longitude" <~~ json)!)
-        annotation = Annotation(title: "MySpot", subtitle: address, coordinate: location, id: id)
         photos = "photos" <~~ json
-        wifi = "wifi" <~~ json
-        coffee = "coffee" <~~ json
-        groupSpace = "groupSpace" <~~ json
+//        wifi = "wifi" <~~ json
+//        coffee = "coffee" <~~ json
+//        groupSpace = "groupSpace" <~~ json
     }
     
     func toJSON() -> JSON? {

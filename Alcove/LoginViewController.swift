@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -19,6 +20,15 @@ class LoginViewController: UIViewController {
         
       //  loginButton.titleLabel?.font = UIFont.boldSystemFontOfSize(15)
 
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            if user != nil {
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

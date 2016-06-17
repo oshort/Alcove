@@ -26,6 +26,7 @@ class DataService {
         return USERS_REF
     }
     var studySpotsRef : FIRDatabaseReference {
+        print(STUDY_SPOTS_REF)
         return STUDY_SPOTS_REF
     }
     var currentUser : FIRUser? {
