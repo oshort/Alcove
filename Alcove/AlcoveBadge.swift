@@ -38,40 +38,7 @@ import UIKit
         }
     }
     
-    // MARK: Badge shadow
-    // --------------------------
-    
-    /// Opacity of the badge shadow
-    @IBInspectable var shadowOpacityBadge: CGFloat = 0.5 {
-        didSet {
-            layer.shadowOpacity = Float(shadowOpacityBadge)
-            setNeedsDisplay()
-        }
-    }
-    
-    /// Size of the badge shadow
-    @IBInspectable var shadowRadiusBadge: CGFloat = 0.5 {
-        didSet {
-            layer.shadowRadius = shadowRadiusBadge
-            setNeedsDisplay()
-        }
-    }
-    
-    /// Color of the badge shadow
-    @IBInspectable var shadowColorBadge: UIColor = UIColor.blackColor() {
-        didSet {
-            layer.shadowColor = shadowColorBadge.CGColor
-            setNeedsDisplay()
-        }
-    }
-    
-    /// Offset of the badge shadow
-    @IBInspectable var shadowOffsetBadge: CGSize = CGSize(width: 0, height: 0) {
-        didSet {
-            layer.shadowOffset = shadowOffsetBadge
-            setNeedsDisplay()
-        }
-    }
+   
     
     convenience init() {
         self.init(frame: CGRect())

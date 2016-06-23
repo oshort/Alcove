@@ -16,7 +16,6 @@ class DataService {
 //    private let BASE_STORAGE_REF = FIRStorage.storage().referenceForURL("")
     private let USERS_REF = FIRDatabase.database().reference().child("users")
     private let STUDY_SPOTS_REF = FIRDatabase.database().reference().child("studyspots")
-    private var CURRENT_USER: FIRUser?
     
     var baseRef : FIRDatabaseReference {
         return BASE_REF
@@ -26,16 +25,6 @@ class DataService {
         return USERS_REF
     }
     var studySpotsRef : FIRDatabaseReference {
-        print(STUDY_SPOTS_REF)
         return STUDY_SPOTS_REF
     }
-    var currentUser : FIRUser? {
-        if let user = CURRENT_USER {
-            return user
-        } else {
-            return nil
-        }
-    }
-    
-    
 }

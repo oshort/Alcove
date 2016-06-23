@@ -20,10 +20,16 @@
             <string>Marcellus-Regular</string>
             <string>Marcellus-Regular</string>
             <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
+            <string>Marcellus-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--My Spots View Controller-->
+        <!--My Spots-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="MySpotsViewController" customModule="Alcove" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,21 +41,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Mg-wGV">
-                                <rect key="frame" x="0.0" y="72" width="600" height="479"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Mg-wGV">
+                                <rect key="frame" x="5" y="20" width="595" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="479" id="KQ4-00-dVt"/>
-                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mySpotsTableViewCell" rowHeight="94" id="UJF-iE-070" customClass="MySpotsTableViewCell" customModule="Alcove" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="94"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mySpotsTableViewCell" rowHeight="125" id="UJF-iE-070" customClass="MySpotsTableViewCell" customModule="Alcove" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="595" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJF-iE-070" id="2Xd-l7-xgH">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="562" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
                                                     <rect key="frame" x="460" y="8" width="99" height="77"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-J6-Qoo">
@@ -83,17 +86,12 @@
                                                 <constraint firstItem="hMG-AV-CXg" firstAttribute="leading" secondItem="2Xd-l7-xgH" secondAttribute="leadingMargin" id="vCB-2y-du7"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="spotTableViewCellDistanceLabel" destination="hMG-AV-CXg" id="Uue-Vc-G3C"/>
                                             <outlet property="spotTableViewCellTitleLabel" destination="qOg-J6-Qoo" id="4k0-dM-wSO"/>
                                             <outlet property="spotTableViewCellTypeLabel" destination="91T-oG-uzH" id="RfO-n2-ZD5"/>
                                             <outlet property="spotTableViewImage" destination="bOX-T9-1Fj" id="Mpy-hI-bOO"/>
-                                            <segue destination="eXD-mj-K2P" kind="show" id="JOo-Tc-hFO"/>
+                                            <segue destination="bUI-eJ-uyE" kind="show" identifier="spotDetailSegue" id="cBN-I4-gBn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,40 +100,23 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="vXy-yJ-Q0F"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbV-cu-OPy">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <color key="barTintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="18"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="MySpots" id="zZb-rM-kgm">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8fJ-sU-TwR">
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fbV-cu-OPy" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="3dH-LF-0Em"/>
-                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="3pc-9r-kjI"/>
-                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="top" secondItem="fbV-cu-OPy" secondAttribute="bottom" id="92t-XA-yoW"/>
-                            <constraint firstItem="wd0-Mg-wGV" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="Evc-PR-gpX"/>
-                            <constraint firstItem="fbV-cu-OPy" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cLY-gs-chd"/>
-                            <constraint firstItem="fbV-cu-OPy" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="sia-Ou-o4l"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="My Spots" id="6N2-yP-2ua">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EU1-IC-tHp">
+                            <connections>
+                                <segue destination="U15-nH-5H6" kind="show" id="URu-kd-juM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="spotsTableView" destination="wd0-Mg-wGV" id="wJ7-3h-047"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1562" y="-320"/>
         </scene>
         <!--My Spots Detail View Controller-->
         <scene sceneID="xln-yQ-h9e">
@@ -149,11 +130,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ndk-HD-IoY">
-                                <rect key="frame" x="0.0" y="64" width="600" height="182"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example image" translatesAutoresizingMaskIntoConstraints="NO" id="Ndk-HD-IoY">
+                                <rect key="frame" x="0.0" y="80" width="600" height="182"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24B-Tw-0EZ" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="20" y="254" width="60" height="60"/>
+                                <rect key="frame" x="20" y="270" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="CQC-dy-dgz"/>
                                     <constraint firstAttribute="height" constant="60" id="Cnu-c9-iLY"/>
@@ -171,19 +152,10 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusBadge">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacityBadge">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetBadge">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qET-9S-wqy" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="88" y="254" width="60" height="60"/>
+                                <rect key="frame" x="88" y="270" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="01j-wK-UtG"/>
                                     <constraint firstAttribute="width" constant="60" id="bu6-qH-adB"/>
@@ -201,19 +173,10 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusBadge">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacityBadge">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetBadge">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBV-GS-gc4" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="156" y="254" width="60" height="60"/>
+                                <rect key="frame" x="156" y="270" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="V4i-6x-HeQ"/>
                                     <constraint firstAttribute="width" constant="60" id="fnC-e8-5Y9"/>
@@ -231,19 +194,10 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusBadge">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacityBadge">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetBadge">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ukS-bb-tN4" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="224" y="254" width="60" height="60"/>
+                                <rect key="frame" x="224" y="270" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="0o9-Ec-d2D"/>
                                     <constraint firstAttribute="height" constant="60" id="gc4-tM-RcY"/>
@@ -261,57 +215,241 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadiusBadge">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacityBadge">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetBadge">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mo-hk-pfG">
-                                <rect key="frame" x="20" y="322" width="94" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mo-hk-pfG">
+                                <rect key="frame" x="20" y="338" width="82" height="22"/>
                                 <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haQ-h7-lgZ">
-                                <rect key="frame" x="20" y="352" width="105" height="22"/>
+                                <rect key="frame" x="20" y="368" width="105" height="22"/>
                                 <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pL-7F-rqm">
+                                <rect key="frame" x="20" y="398" width="110" height="22"/>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vE-UM-TAb">
+                                <rect key="frame" x="150" y="493" width="300" height="38"/>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="20"/>
+                                <state key="normal" title="Map It!"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9pL-7F-rqm" firstAttribute="top" secondItem="haQ-h7-lgZ" secondAttribute="bottom" constant="8" id="0jj-1I-n0w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ndk-HD-IoY" secondAttribute="trailing" constant="-20" id="2p7-75-PEn"/>
                             <constraint firstItem="haQ-h7-lgZ" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" id="34j-ts-f1L"/>
                             <constraint firstItem="ukS-bb-tN4" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="4M4-nd-qGz"/>
                             <constraint firstItem="sBV-GS-gc4" firstAttribute="leading" secondItem="qET-9S-wqy" secondAttribute="trailing" constant="8" id="5D1-RD-d72"/>
+                            <constraint firstItem="6vE-UM-TAb" firstAttribute="centerX" secondItem="fCI-vY-yMx" secondAttribute="centerX" id="5Yw-pC-66y"/>
                             <constraint firstItem="sBV-GS-gc4" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="7I9-c5-FWx"/>
-                            <constraint firstItem="Ndk-HD-IoY" firstAttribute="top" secondItem="trF-8Q-EaL" secondAttribute="bottom" id="Fih-OR-KAC"/>
+                            <constraint firstItem="9pL-7F-rqm" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" id="BUS-vj-T2C"/>
+                            <constraint firstItem="ukS-bb-tN4" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="CNh-Ei-MS9"/>
+                            <constraint firstItem="6vE-UM-TAb" firstAttribute="width" secondItem="fCI-vY-yMx" secondAttribute="width" multiplier="0.5" id="CwF-Kj-ztI"/>
                             <constraint firstItem="ukS-bb-tN4" firstAttribute="leading" secondItem="sBV-GS-gc4" secondAttribute="trailing" constant="8" id="Hvh-7W-W2w"/>
                             <constraint firstItem="24B-Tw-0EZ" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="N1e-5l-fFL"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="width" secondItem="fCI-vY-yMx" secondAttribute="width" id="Qjt-nI-E15"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="height" secondItem="fCI-vY-yMx" secondAttribute="height" multiplier="0.33" id="WOg-KN-ec3"/>
+                            <constraint firstItem="Ndk-HD-IoY" firstAttribute="top" secondItem="trF-8Q-EaL" secondAttribute="bottom" constant="16" id="Z5P-fe-Dvj"/>
                             <constraint firstItem="24B-Tw-0EZ" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" id="ZCs-3j-A3E"/>
                             <constraint firstItem="qET-9S-wqy" firstAttribute="leading" secondItem="24B-Tw-0EZ" secondAttribute="trailing" constant="8" id="Zpd-JF-C5u"/>
                             <constraint firstItem="0Mo-hk-pfG" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" id="cTq-sp-U3u"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="leading" secondItem="fCI-vY-yMx" secondAttribute="leadingMargin" constant="-20" id="hlq-2l-5yq"/>
                             <constraint firstItem="Ndk-HD-IoY" firstAttribute="centerX" secondItem="fCI-vY-yMx" secondAttribute="centerX" id="jdH-WQ-XvX"/>
                             <constraint firstItem="qET-9S-wqy" firstAttribute="top" secondItem="Ndk-HD-IoY" secondAttribute="bottom" constant="8" id="nDy-FP-6km"/>
+                            <constraint firstItem="OjK-AF-S6u" firstAttribute="top" secondItem="6vE-UM-TAb" secondAttribute="bottom" constant="20" id="ozB-Qu-kVp"/>
                             <constraint firstItem="haQ-h7-lgZ" firstAttribute="top" secondItem="0Mo-hk-pfG" secondAttribute="bottom" constant="8" id="r18-RZ-9mr"/>
                             <constraint firstItem="0Mo-hk-pfG" firstAttribute="top" secondItem="sBV-GS-gc4" secondAttribute="bottom" constant="8" id="x7f-Az-cK3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7aN-5M-33A"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="haQ-h7-lgZ" id="1Eg-41-ErR"/>
+                        <outlet property="distanceLabel" destination="9pL-7F-rqm" id="OVc-DC-964"/>
+                        <outlet property="typeLabel" destination="0Mo-hk-pfG" id="05u-aN-cxc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xG-kV-s15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="-346"/>
+            <point key="canvasLocation" x="2506" y="-966"/>
+        </scene>
+        <!--New Spots View Controller-->
+        <scene sceneID="zm4-dH-pxA">
+            <objects>
+                <viewController id="U15-nH-5H6" customClass="NewSpotsViewController" customModule="Alcove" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CSQ-7m-yqj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ppk-ET-hkB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uhS-4R-1gn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8V0-Cb-pBh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="165"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQY-Dl-xOi">
+                                <rect key="frame" x="20" y="173" width="450" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fdg-yA-cXy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="To4-MT-ABp">
+                                <rect key="frame" x="20" y="211" width="450" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qb6-PW-fHh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-MI-NvK" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="20" y="255" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="s8s-7v-WIH"/>
+                                    <constraint firstAttribute="width" constant="60" id="uL8-xF-ZJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvt-n8-ktu" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="88" y="255" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7PF-bO-zkZ"/>
+                                    <constraint firstAttribute="width" constant="60" id="tQ0-m8-Mxe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IXB-NU-KYl" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="156" y="255" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="OCu-TW-X5j"/>
+                                    <constraint firstAttribute="height" constant="60" id="dff-2A-joH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V0V-t9-TOY" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="224" y="255" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="XPa-Dd-Oqr"/>
+                                    <constraint firstAttribute="height" constant="60" id="kQh-Px-02k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-KY-4YW">
+                                <rect key="frame" x="486" y="270" width="90" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="486" y="345" width="90" height="30"/>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="339" y="285" width="37" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="U15-nH-5H6" eventType="touchUpInside" id="Zdy-lT-fWP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KAK-KY-4YW" secondAttribute="trailing" constant="4" id="6Dv-u5-xUA"/>
+                            <constraint firstItem="jvt-n8-ktu" firstAttribute="leading" secondItem="Aj1-MI-NvK" secondAttribute="trailing" constant="8" id="764-i5-7iJ"/>
+                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="leading" secondItem="uhS-4R-1gn" secondAttribute="leadingMargin" id="8eI-df-wY2"/>
+                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="top" secondItem="To4-MT-ABp" secondAttribute="bottom" constant="14" id="9ME-wh-byQ"/>
+                            <constraint firstItem="KAK-KY-4YW" firstAttribute="width" secondItem="8V0-Cb-pBh" secondAttribute="width" multiplier="0.15" id="Cv3-n8-pP8"/>
+                            <constraint firstItem="To4-MT-ABp" firstAttribute="width" secondItem="AQY-Dl-xOi" secondAttribute="width" id="E1D-Kb-Vx9"/>
+                            <constraint firstItem="8V0-Cb-pBh" firstAttribute="centerX" secondItem="uhS-4R-1gn" secondAttribute="centerX" id="E8B-zS-WJ8"/>
+                            <constraint firstItem="V0V-t9-TOY" firstAttribute="leading" secondItem="IXB-NU-KYl" secondAttribute="trailing" constant="8" id="KKD-I5-CdN"/>
+                            <constraint firstItem="IXB-NU-KYl" firstAttribute="leading" secondItem="jvt-n8-ktu" secondAttribute="trailing" constant="8" id="PMm-zD-Y7U"/>
+                            <constraint firstItem="8V0-Cb-pBh" firstAttribute="height" secondItem="uhS-4R-1gn" secondAttribute="height" multiplier="0.3" id="QNp-AH-9a8"/>
+                            <constraint firstItem="V0V-t9-TOY" firstAttribute="top" secondItem="To4-MT-ABp" secondAttribute="bottom" constant="14" id="Rjn-wZ-mFy"/>
+                            <constraint firstItem="To4-MT-ABp" firstAttribute="top" secondItem="AQY-Dl-xOi" secondAttribute="bottom" constant="8" id="Tqo-QA-8q1"/>
+                            <constraint firstItem="KAK-KY-4YW" firstAttribute="top" secondItem="8V0-Cb-pBh" secondAttribute="bottom" constant="105" id="aNV-0R-rJR"/>
+                            <constraint firstItem="AQY-Dl-xOi" firstAttribute="top" secondItem="8V0-Cb-pBh" secondAttribute="bottom" constant="8" id="bK1-jK-EEl"/>
+                            <constraint firstItem="To4-MT-ABp" firstAttribute="leading" secondItem="uhS-4R-1gn" secondAttribute="leadingMargin" id="cce-Mm-Rs7"/>
+                            <constraint firstItem="AQY-Dl-xOi" firstAttribute="leading" secondItem="uhS-4R-1gn" secondAttribute="leadingMargin" id="eTa-UM-SGz"/>
+                            <constraint firstItem="IXB-NU-KYl" firstAttribute="top" secondItem="To4-MT-ABp" secondAttribute="bottom" constant="14" id="fRC-sg-6Kv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KAK-KY-4YW" secondAttribute="trailing" constant="4" id="jgn-IJ-9Dg"/>
+                            <constraint firstItem="8V0-Cb-pBh" firstAttribute="top" secondItem="uhS-4R-1gn" secondAttribute="topMargin" id="os0-kb-b6Y"/>
+                            <constraint firstItem="jvt-n8-ktu" firstAttribute="top" secondItem="To4-MT-ABp" secondAttribute="bottom" constant="14" id="spc-BW-2lv"/>
+                            <constraint firstItem="AQY-Dl-xOi" firstAttribute="width" secondItem="uhS-4R-1gn" secondAttribute="width" multiplier="0.75" id="uat-76-EAx"/>
+                            <constraint firstItem="8V0-Cb-pBh" firstAttribute="width" secondItem="uhS-4R-1gn" secondAttribute="width" id="x3X-LS-12D"/>
+                        </constraints>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="Cv3-n8-pP8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="newSpotAddressTextField" destination="To4-MT-ABp" id="BYf-2m-Dm8"/>
+                        <outlet property="newSpotImage" destination="8V0-Cb-pBh" id="3wA-mR-pLH"/>
+                        <outlet property="newSpotNameTextField" destination="AQY-Dl-xOi" id="eYl-s1-OZj"/>
+                        <outlet property="newSpotWifiLabel" destination="Aj1-MI-NvK" id="mGN-hP-uQn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrY-LX-H0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="435"/>
         </scene>
         <!--Map-->
         <scene sceneID="wg7-f3-ORb">
@@ -336,7 +474,14 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Find your Alcove" id="mYc-SV-Erc"/>
+                                    <navigationItem title="Find your Alcove" id="mYc-SV-Erc">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mDr-KC-z65">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="U15-nH-5H6" kind="show" id="rpS-tB-6nh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -373,7 +518,50 @@
                     <view key="view" contentMode="scaleToFill" id="8L2-1I-XsC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bA-9f-clE">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <color key="barTintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="My Account" id="gKw-An-emT"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-40-7Md">
+                                <rect key="frame" x="0.0" y="72" width="600" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="471" id="X5p-Mh-yXl"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="x7c-Hd-8sJ">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="113"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x7c-Hd-8sJ" id="nB2-Nm-Dq4">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vku-Xa-6r7">
+                                                    <rect key="frame" x="257" y="3" width="86" height="68"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1bA-9f-clE" firstAttribute="width" secondItem="8L2-1I-XsC" secondAttribute="width" id="0UJ-Ba-0yv"/>
+                            <constraint firstItem="AIw-40-7Md" firstAttribute="top" secondItem="1bA-9f-clE" secondAttribute="bottom" id="4gO-E7-Feo"/>
+                            <constraint firstItem="AIw-40-7Md" firstAttribute="leading" secondItem="8L2-1I-XsC" secondAttribute="leadingMargin" constant="-20" id="6SH-FE-JKt"/>
+                            <constraint firstItem="1bA-9f-clE" firstAttribute="centerX" secondItem="8L2-1I-XsC" secondAttribute="centerX" id="MWg-RC-dUZ"/>
+                            <constraint firstItem="1bA-9f-clE" firstAttribute="top" secondItem="axy-fs-qSV" secondAttribute="bottom" constant="8" id="hUr-Co-rsv"/>
+                            <constraint firstItem="AIw-40-7Md" firstAttribute="centerX" secondItem="8L2-1I-XsC" secondAttribute="centerX" id="r8O-dS-dSk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="account" id="hCq-zy-YFT"/>
                 </viewController>
@@ -393,7 +581,7 @@
                         <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="W27-D7-eXj" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="Kc6-8m-3Ev" kind="relationship" relationship="viewControllers" id="GcW-pt-yQq"/>
                     </connections>
@@ -467,27 +655,33 @@
             <point key="canvasLocation" x="-754" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="5S5-Gb-jR8">
+        <scene sceneID="48W-E3-zrv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eXD-mj-K2P" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W27-D7-eXj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Al8-7U-jTJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ap-Yv-aOt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bUI-eJ-uyE" kind="relationship" relationship="rootViewController" id="ZaD-23-6cK"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="kWf-IN-8Fr"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tlq-Rk-WQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhS-mv-yjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1465" y="-320"/>
+            <point key="canvasLocation" x="750" y="-320"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="29" height="29"/>
         <image name="account" width="29" height="29"/>
+        <image name="example image" width="348" height="348"/>
         <image name="logo" width="499" height="586"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rpS-tB-6nh"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import Firebase
+import Gloss
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -18,17 +20,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     let mapRegionRadius: CLLocationDistance = 200
+    var studySpots = [String: StudySpot]()
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+// MARK: Firebase Functions - **LOOK INTO USING GEOFIRE**
+        
+    func listenForStudySpotEvents() {
+            // Listener for new study spots
+            DataService.dataService.studySpotsRef.observeEventType(.ChildAdded) { (activeKeys: FIRDataSnapshot) in
+                DataService.dataService.studySpotsRef.child(activeKeys.key).observeSingleEventOfType(.Value) { (snapshot: FIRDataSnapshot) in
+                    let studySpot = StudySpot(json: snapshot.value as! JSON)
+                    self.studySpots[snapshot.key] = studySpot
+//                    self.mapView.addAnnotation((studySpot?.mapAnnotation)!)
+            }
+        }
     }
 
     func checkLocationAuthorization() {
@@ -38,5 +52,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.requestWhenInUseAuthorization()
         }
     }
+    
+
 
 }
