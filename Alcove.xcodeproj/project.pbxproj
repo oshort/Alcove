@@ -17,11 +17,11 @@
 		7B3670211D12F87800154D6B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3670201D12F87800154D6B /* DataService.swift */; };
 		7B3670251D133D3100154D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B3670241D133D3100154D6B /* GoogleService-Info.plist */; };
 		7B62D1E01D196606001AF7FF /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62D1DF1D196606001AF7FF /* MapAnnotation.swift */; };
-		7B62D1E21D1C1F3A001AF7FF /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62D1E11D1C1F3A001AF7FF /* DataStorage.swift */; };
 		7B62D1E61D1C3F8A001AF7FF /* NewSpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62D1E51D1C3F8A001AF7FF /* NewSpotsViewController.swift */; };
 		7B62D1E81D1C6077001AF7FF /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62D1E71D1C6077001AF7FF /* AddressTableViewCell.swift */; };
 		7B6FB7831D11A56E00D06385 /* StudySpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6FB7821D11A56E00D06385 /* StudySpot.swift */; };
 		7B6FB7851D11C40900D06385 /* AlcoveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6FB7841D11C40900D06385 /* AlcoveUser.swift */; };
+		7B8AAABE1D1C8279000E85DA /* DirectoryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8AAABD1D1C8279000E85DA /* DirectoryServices.swift */; };
 		7B8ECB871D117DD4003D45A0 /* MySpotsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8ECB861D117DD4003D45A0 /* MySpotsDetailViewController.swift */; };
 		7BA8274F1D0F031D0054B3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA8274E1D0F031D0054B3B1 /* AppDelegate.swift */; };
 		7BA827511D0F031D0054B3B1 /* MySpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA827501D0F031D0054B3B1 /* MySpotsViewController.swift */; };
@@ -43,11 +43,11 @@
 		7B3670201D12F87800154D6B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7B3670241D133D3100154D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B62D1DF1D196606001AF7FF /* MapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
-		7B62D1E11D1C1F3A001AF7FF /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		7B62D1E51D1C3F8A001AF7FF /* NewSpotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSpotsViewController.swift; sourceTree = "<group>"; };
 		7B62D1E71D1C6077001AF7FF /* AddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
 		7B6FB7821D11A56E00D06385 /* StudySpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudySpot.swift; sourceTree = "<group>"; };
 		7B6FB7841D11C40900D06385 /* AlcoveUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoveUser.swift; sourceTree = "<group>"; };
+		7B8AAABD1D1C8279000E85DA /* DirectoryServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryServices.swift; sourceTree = "<group>"; };
 		7B8ECB861D117DD4003D45A0 /* MySpotsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpotsDetailViewController.swift; sourceTree = "<group>"; };
 		7BA8274B1D0F031D0054B3B1 /* Alcove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA8274E1D0F031D0054B3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				7BA827541D0F031D0054B3B1 /* Main.storyboard */,
+				7B8AAABD1D1C8279000E85DA /* DirectoryServices.swift */,
 				7B3670201D12F87800154D6B /* DataService.swift */,
-				7B62D1E11D1C1F3A001AF7FF /* DataStorage.swift */,
 				7B6FB7871D11C57800D06385 /* Model */,
 				7B6FB7861D11C41100D06385 /* Views */,
 				7B8B243F1D12D98700E546E2 /* Controllers */,
@@ -296,10 +296,10 @@
 				7B3670211D12F87800154D6B /* DataService.swift in Sources */,
 				7B6FB7851D11C40900D06385 /* AlcoveUser.swift in Sources */,
 				7B1A8B141D0F058E00F65380 /* MySpotsTableViewCell.swift in Sources */,
-				7B62D1E21D1C1F3A001AF7FF /* DataStorage.swift in Sources */,
 				7B1A8B121D0F04CC00F65380 /* LoginViewController.swift in Sources */,
 				7B62D1E81D1C6077001AF7FF /* AddressTableViewCell.swift in Sources */,
 				7BA827511D0F031D0054B3B1 /* MySpotsViewController.swift in Sources */,
+				7B8AAABE1D1C8279000E85DA /* DirectoryServices.swift in Sources */,
 				7B62D1E01D196606001AF7FF /* MapAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
