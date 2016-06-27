@@ -52,8 +52,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="562" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
-                                                    <rect key="frame" x="460" y="8" width="99" height="77"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
+                                                    <rect key="frame" x="455" y="8" width="99" height="108"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-J6-Qoo">
                                                     <rect key="frame" x="8" y="8" width="73" height="22"/>
@@ -106,7 +106,7 @@
                     <navigationItem key="navigationItem" title="My Spots" id="6N2-yP-2ua">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EU1-IC-tHp">
                             <connections>
-                                <segue destination="U15-nH-5H6" kind="show" id="URu-kd-juM"/>
+                                <segue destination="U15-nH-5H6" kind="show" identifier="tableToAddSegue" id="URu-kd-juM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -130,7 +130,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example image" translatesAutoresizingMaskIntoConstraints="NO" id="Ndk-HD-IoY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempSpotImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ndk-HD-IoY">
                                 <rect key="frame" x="0.0" y="80" width="600" height="182"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24B-Tw-0EZ" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
@@ -292,7 +292,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8V0-Cb-pBh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempSpotImage" translatesAutoresizingMaskIntoConstraints="NO" id="8V0-Cb-pBh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="165"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQY-Dl-xOi">
@@ -677,11 +677,11 @@
     <resources>
         <image name="Image" width="29" height="29"/>
         <image name="account" width="29" height="29"/>
-        <image name="example image" width="348" height="348"/>
         <image name="logo" width="499" height="586"/>
+        <image name="tempSpotImage" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rpS-tB-6nh"/>
+        <segue reference="URu-kd-juM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

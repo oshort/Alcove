@@ -18,16 +18,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      //  loginButton.titleLabel?.font = UIFont.boldSystemFontOfSize(15)
+       self.view.backgroundColor = UIColor(patternImage: UIImage(named: "alcove1.jpeg")!)
 
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
-            if user != nil {
-                self.performSegueWithIdentifier("loginSegue", sender: nil)
-            }
+//            if user != nil {
+//                self.performSegueWithIdentifier("loginSegue", sender: nil)
+//            }
         }
     }
 

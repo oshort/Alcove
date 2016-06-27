@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import Firebase
+import FirebaseStorage
 import Gloss
 
 
@@ -16,14 +17,16 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     var ref = FIRDatabase.database().reference().child("studyspots/asdlkjf/address")
     @IBOutlet weak var spotsTableView: UITableView!
-    
     var objects = [StudySpot]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
             print("view loaded!")
-        
-        
+        let backgroundImage = UIImage(named: "alcove1.jpeg")
+        let imageView = UIImageView(image: backgroundImage)
+        self.spotsTableView.backgroundView = imageView
+        spotsTableView.tableFooterView = UIView(frame: CGRectZero)
+        imageView.contentMode = .ScaleAspectFill
 }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +73,8 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell?.spotTableViewCellTitleLabel.text = (self.objects[indexPath.row]).name
         cell?.spotTableViewCellTypeLabel.text = (self.objects[indexPath.row]).type
+        cell?.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        
         
         return cell!
     }

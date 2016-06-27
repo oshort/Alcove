@@ -13,7 +13,7 @@ class DataService {
     static let dataService = DataService()
     
     private let BASE_REF = FIRDatabase.database().reference()
-//    private let BASE_STORAGE_REF = FIRStorage.storage().referenceForURL("")
+    private let BASE_STORAGE_REF = FIRStorage.storage().referenceForURL("gs://project-3802795291319686281.appspot.com")
     private let USERS_REF = FIRDatabase.database().reference().child("users")
     private let STUDY_SPOTS_REF = FIRDatabase.database().reference().child("studyspots")
     
@@ -27,4 +27,9 @@ class DataService {
     var studySpotsRef : FIRDatabaseReference {
         return STUDY_SPOTS_REF
     }
+    
+    var storageRef: FIRStorageReference {
+        return BASE_STORAGE_REF
+    }
+    
 }

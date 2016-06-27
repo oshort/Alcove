@@ -13,38 +13,39 @@ class DirectoryServices: AnyObject {
 
 // MARK: Image Directory Services for adding images to a StudySpot
     
+    //Creating a file path to the documents directory locally
     class func getDocumentsDirectory() -> NSURL {
         return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
     }
     
-    class func getImagePath() -> String {
-        return getDocumentsDirectory().URLByAppendingPathComponent("").path!
+    class func getImagePath(fileName:String) -> String {
+        return getDocumentsDirectory().URLByAppendingPathComponent(fileName).path!
     }
     
     class func getTempImagePath() -> String {
-        return getDocumentsDirectory().URLByAppendingPathComponent("").path!
+        return getDocumentsDirectory().URLByAppendingPathComponent("tempSpotImage").path!
     }
     
-    class func writeImageToDirectory(image: UIImage) {
-        let newImage = UIImageJPEGRepresentation(image, 1.0)
-        try! newImage?.writeToFile(getImagePath(), options: .DataWritingAtomic)
+    class func writeImageToDirectory(image: UIImage, fileName: String) {
+        let newImage = UIImagePNGRepresentation(image)
+        try! newImage?.writeToFile(getImagePath(fileName), options: .DataWritingAtomic)
     }
     
     class func writeTempImageToDirectory(image: UIImage) {
-        let newImage = UIImageJPEGRepresentation(image, 1.0)
+        let newImage = UIImagePNGRepresentation(image)
         try! newImage?.writeToFile(getTempImagePath(), options: .DataWritingAtomic)
     }
     
-    class func profileImageExists() -> Bool {
-        return NSFileManager.defaultManager().fileExistsAtPath(getImagePath())
+    class func spotImageExists(fileName: String) -> Bool {
+        return NSFileManager.defaultManager().fileExistsAtPath(getImagePath(fileName))
     }
     
-    class func tempProfileImageExists() -> Bool {
+    class func tempSpotImageExists() -> Bool {
         return NSFileManager.defaultManager().fileExistsAtPath(getTempImagePath())
     }
     
-    class func removeImage() {
-        try! NSFileManager.defaultManager().removeItemAtPath(getImagePath())
+    class func removeImage(fileName: String) {
+        try! NSFileManager.defaultManager().removeItemAtPath(getImagePath(fileName))
     }
     
     class func removeTempImage() {
