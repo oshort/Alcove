@@ -17,9 +17,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "alcove1.jpeg")!)
-
+    
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -28,6 +27,8 @@ class LoginViewController: UIViewController {
 //            if user != nil {
 //                self.performSegueWithIdentifier("loginSegue", sender: nil)
 //            }
+            
+            
         }
     }
 

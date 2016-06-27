@@ -27,6 +27,7 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.spotsTableView.backgroundView = imageView
         spotsTableView.tableFooterView = UIView(frame: CGRectZero)
         imageView.contentMode = .ScaleAspectFill
+//        navigationController?.navigationBar.barTintColor = UIColor
 }
 
     override func didReceiveMemoryWarning() {
