@@ -22,34 +22,22 @@ class DirectoryServices: AnyObject {
         return getDocumentsDirectory().URLByAppendingPathComponent(fileName).path!
     }
     
-    class func getTempImagePath() -> String {
-        return getDocumentsDirectory().URLByAppendingPathComponent("tempSpotImage").path!
-    }
-    
     class func writeImageToDirectory(image: UIImage, fileName: String) {
         let newImage = UIImagePNGRepresentation(image)
         try! newImage?.writeToFile(getImagePath(fileName), options: .DataWritingAtomic)
     }
     
-    class func writeTempImageToDirectory(image: UIImage) {
-        let newImage = UIImagePNGRepresentation(image)
-        try! newImage?.writeToFile(getTempImagePath(), options: .DataWritingAtomic)
-    }
     
     class func spotImageExists(fileName: String) -> Bool {
         return NSFileManager.defaultManager().fileExistsAtPath(getImagePath(fileName))
-    }
-    
-    class func tempSpotImageExists() -> Bool {
-        return NSFileManager.defaultManager().fileExistsAtPath(getTempImagePath())
     }
     
     class func removeImage(fileName: String) {
         try! NSFileManager.defaultManager().removeItemAtPath(getImagePath(fileName))
     }
     
-    class func removeTempImage() {
-        try! NSFileManager.defaultManager().removeItemAtPath(getTempImagePath())
+ 
+    class func imageForPath (string: String) -> UIImage? {
+        return UIImage(contentsOfFile: getImagePath(string))
     }
-    
 }

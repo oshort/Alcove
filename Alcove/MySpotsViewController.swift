@@ -75,8 +75,12 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell?.spotTableViewCellTitleLabel.text = (self.objects[indexPath.row]).name
         cell?.spotTableViewCellTypeLabel.text = (self.objects[indexPath.row]).type
         cell?.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        
-        
+        if let cellPhoto = (DirectoryServices.imageForPath((self.objects[indexPath.row]).photos!)) {
+            cell?.spotTableViewImage.image = cellPhoto
+        } else {
+            print("No Photo for spot \((self.objects[indexPath.row]).name))")
+            
+        }
         return cell!
     }
     
@@ -95,6 +99,7 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
         if editingStyle == .Delete {
             objects.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            DataService.dataService.studySpotsRef.removeValue()
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
