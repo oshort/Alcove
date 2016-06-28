@@ -29,6 +29,8 @@ class NewSpotsViewController: UIViewController, UIImagePickerControllerDelegate,
         newSpotImage.userInteractionEnabled = true
         newSpotImage.addGestureRecognizer(tapGestureRecognizer)
     }
+    
+//MARK: Badge Tap Gesture Recognizers
  
     @IBAction func coffeeLabelTapped(sender: AnyObject) {
         newSpotCoffeeLabel.badgeColor = UIColor(red: 22.0/255.0, green: 73.0/255.0, blue: 152.0/255.0, alpha: 1.0)

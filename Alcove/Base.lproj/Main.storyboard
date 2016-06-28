@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mySpotsTableViewCell" rowHeight="125" id="UJF-iE-070" customClass="MySpotsTableViewCell" customModule="Alcove" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="spotTableViewCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mySpotsTableViewCell" rowHeight="125" id="UJF-iE-070" customClass="MySpotsTableViewCell" customModule="Alcove" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJF-iE-070" id="2Xd-l7-xgH">
@@ -111,6 +111,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Spots" id="6N2-yP-2ua">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" style="done" id="APY-3p-6MN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EU1-IC-tHp">
                             <connections>
                                 <segue destination="U15-nH-5H6" kind="popoverPresentation" popoverAnchorBarButtonItem="EU1-IC-tHp" id="u30-6v-B1Q">
@@ -125,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="-315"/>
+            <point key="canvasLocation" x="1673" y="-559"/>
         </scene>
         <!--My Spots Detail View Controller-->
         <scene sceneID="xln-yQ-h9e">
@@ -333,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xG-kV-s15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2368" y="-315"/>
+            <point key="canvasLocation" x="2454" y="-513"/>
         </scene>
         <!--New Spots View Controller-->
         <scene sceneID="zm4-dH-pxA">
@@ -362,7 +363,7 @@
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -387,7 +388,7 @@
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -462,7 +463,7 @@
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -487,7 +488,7 @@
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -525,7 +526,7 @@
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -624,10 +625,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="37q-kx-0Lm">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="37q-kx-0Lm">
                                 <rect key="frame" x="0.0" y="72" width="600" height="471"/>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-Vj-aXd">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-Vj-aXd">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <color key="barTintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
@@ -669,68 +670,6 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Account-->
-        <scene sceneID="GHU-lc-Z0a">
-            <objects>
-                <viewController id="Kc6-8m-3Ev" customClass="AccountViewController" customModule="Alcove" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="axy-fs-qSV"/>
-                        <viewControllerLayoutGuide type="bottom" id="maS-w8-Feg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8L2-1I-XsC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bA-9f-clE">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <color key="barTintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="My Account" id="gKw-An-emT"/>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-40-7Md">
-                                <rect key="frame" x="0.0" y="72" width="600" height="471"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="471" id="X5p-Mh-yXl"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="x7c-Hd-8sJ">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="113"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x7c-Hd-8sJ" id="nB2-Nm-Dq4">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="112"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vku-Xa-6r7">
-                                                    <rect key="frame" x="257" y="3" width="86" height="68"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="1bA-9f-clE" firstAttribute="width" secondItem="8L2-1I-XsC" secondAttribute="width" id="0UJ-Ba-0yv"/>
-                            <constraint firstItem="AIw-40-7Md" firstAttribute="top" secondItem="1bA-9f-clE" secondAttribute="bottom" id="4gO-E7-Feo"/>
-                            <constraint firstItem="AIw-40-7Md" firstAttribute="leading" secondItem="8L2-1I-XsC" secondAttribute="leadingMargin" constant="-20" id="6SH-FE-JKt"/>
-                            <constraint firstItem="1bA-9f-clE" firstAttribute="centerX" secondItem="8L2-1I-XsC" secondAttribute="centerX" id="MWg-RC-dUZ"/>
-                            <constraint firstItem="1bA-9f-clE" firstAttribute="top" secondItem="axy-fs-qSV" secondAttribute="bottom" constant="8" id="hUr-Co-rsv"/>
-                            <constraint firstItem="AIw-40-7Md" firstAttribute="centerX" secondItem="8L2-1I-XsC" secondAttribute="centerX" id="r8O-dS-dSk"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="account" id="hCq-zy-YFT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VCC-oZ-l26" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-5" y="856"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -745,7 +684,6 @@
                     <connections>
                         <segue destination="W27-D7-eXj" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Kc6-8m-3Ev" kind="relationship" relationship="viewControllers" id="GcW-pt-yQq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -838,12 +776,11 @@
     </scenes>
     <resources>
         <image name="Image" width="29" height="29"/>
-        <image name="account" width="29" height="29"/>
         <image name="logo" width="499" height="586"/>
         <image name="tempSpotImage" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rpS-tB-6nh"/>
+        <segue reference="u30-6v-B1Q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

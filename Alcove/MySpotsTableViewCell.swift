@@ -22,8 +22,7 @@ class MySpotsTableViewCell: UITableViewCell {
         
 // Set the corner radius for the spot image view
         super.awakeFromNib()
-//        self.spotTableViewImage.layer.cornerRadius = self.spotTableViewImage.frame.size.width / 2
-//        self.spotTableViewImage.clipsToBounds = true
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
