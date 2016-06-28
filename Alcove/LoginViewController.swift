@@ -24,11 +24,9 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
-//            if user != nil {
-//                self.performSegueWithIdentifier("loginSegue", sender: nil)
-//            }
-            
-            
+            if user != nil {
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
+            }
         }
     }
 

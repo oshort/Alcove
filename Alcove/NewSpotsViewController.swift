@@ -15,7 +15,12 @@ class NewSpotsViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var newSpotImage: UIImageView!
     @IBOutlet weak var newSpotNameTextField: UITextField!
     @IBOutlet weak var newSpotAddressTextField: UITextField!
+    @IBOutlet weak var newSpotTypeField: UITextField!
     @IBOutlet weak var newSpotWifiLabel: AlcoveBadge!
+    @IBOutlet weak var newSpotCoffeeLabel: AlcoveBadge!
+    @IBOutlet weak var newSpotPrintingLabel: AlcoveBadge!
+    @IBOutlet weak var newSpotNoiseLabel: AlcoveBadge!
+    @IBOutlet weak var newSpotGroupLabel: AlcoveBadge!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +29,34 @@ class NewSpotsViewController: UIViewController, UIImagePickerControllerDelegate,
         newSpotImage.userInteractionEnabled = true
         newSpotImage.addGestureRecognizer(tapGestureRecognizer)
     }
-
+ 
+    @IBAction func coffeeLabelTapped(sender: AnyObject) {
+        newSpotCoffeeLabel.badgeColor = UIColor(red: 22.0/255.0, green: 73.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+        newSpotCoffeeLabel.textColor = UIColor.whiteColor()
+    }
+    
+    @IBAction func printingLabelTapped(sender: AnyObject) {
+        newSpotPrintingLabel.badgeColor = UIColor(red: 22.0/255.0, green: 73.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+        newSpotPrintingLabel.textColor = UIColor.whiteColor()
+    }
+    
+    @IBAction func wifiLabelTapped(sender: AnyObject) {
+        newSpotWifiLabel.badgeColor = UIColor(red: 22.0/255.0, green: 73.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+        newSpotWifiLabel.textColor = UIColor.whiteColor()
+        
+    }
+    @IBAction func groupLabelTapped(sender: AnyObject) {
+        newSpotGroupLabel.badgeColor = UIColor(red: 22.0/255.0, green: 73.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+        newSpotGroupLabel.textColor = UIColor.whiteColor()
+    }
+    
+    @IBAction func quietLabelTapped(sender: AnyObject) {
+        newSpotNoiseLabel.badgeColor = UIColor(red: 22.0/255.0, green: 73.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+        newSpotNoiseLabel.textColor = UIColor.whiteColor()
+    }
+    
+    
+    
 //MARK: Image Picker Methods
     func imageTapped(img: AnyObject) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
@@ -51,9 +83,10 @@ class NewSpotsViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func doneButtonPressed(sender: AnyObject) {
         let spotName = newSpotNameTextField.text
         let address = newSpotAddressTextField.text
+        let type = newSpotTypeField.text
         let newSpotRef = DataService.dataService.studySpotsRef.childByAutoId()
         // location
-        var spotDict = ["name": spotName!, "address": address!, "id": newSpotRef.key,"type": "Coffee Shop"]
+        var spotDict = ["name": spotName!, "address": address!, "id": newSpotRef.key,"type": type!]
         if let spotImage = newSpotImage.image {
             let fileName = NSUUID().UUIDString
             DirectoryServices.writeImageToDirectory(spotImage, fileName: fileName)

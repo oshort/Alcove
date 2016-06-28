@@ -27,8 +27,7 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.spotsTableView.backgroundView = imageView
         spotsTableView.tableFooterView = UIView(frame: CGRectZero)
         imageView.contentMode = .ScaleAspectFill
-//        navigationController?.navigationBar.barTintColor = UIColor
-}
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,7 +37,7 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
             callSpotsData()
-             }
+    }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -63,7 +62,7 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
         })
     }
 
-//MARK: TableView
+//MARK: TableView Methods
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
@@ -72,14 +71,15 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("mySpotsTableViewCell", forIndexPath: indexPath) as? MySpotsTableViewCell
         
+        
         cell?.spotTableViewCellTitleLabel.text = (self.objects[indexPath.row]).name
         cell?.spotTableViewCellTypeLabel.text = (self.objects[indexPath.row]).type
         cell?.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        
         if let cellPhoto = (DirectoryServices.imageForPath((self.objects[indexPath.row]).photos!)) {
             cell?.spotTableViewImage.image = cellPhoto
         } else {
             print("No Photo for spot \((self.objects[indexPath.row]).name))")
-            
         }
         return cell!
     }
@@ -104,6 +104,5 @@ class MySpotsViewController: UIViewController, UITableViewDelegate, UITableViewD
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
 }
 

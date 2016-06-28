@@ -38,8 +38,6 @@ import UIKit
         }
     }
     
-   
-    
     convenience init() {
         self.init(frame: CGRect())
     }

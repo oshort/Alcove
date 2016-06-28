@@ -9,50 +9,38 @@
 import UIKit
 import MapKit
 import Firebase
-import Gloss
+import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
-
-//MARK: Outlet(s)
-    
-    
-//MARK: Location Manager
-    
-    let locationManager = CLLocationManager()
-    let mapRegionRadius: CLLocationDistance = 200
-    var studySpots = [String: StudySpot]()
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        }
+        
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-// MARK: Firebase Functions - **LOOK INTO USING GEOFIRE**
-        
-    func listenForStudySpotEvents() {
-            // Listener for new study spots
-            DataService.dataService.studySpotsRef.observeEventType(.ChildAdded) { (activeKeys: FIRDataSnapshot) in
-                DataService.dataService.studySpotsRef.child(activeKeys.key).observeSingleEventOfType(.Value) { (snapshot: FIRDataSnapshot) in
-                    let studySpot = StudySpot(json: snapshot.value as! JSON)
-                    self.studySpots[snapshot.key] = studySpot
-//                    self.mapView.addAnnotation((studySpot?.mapAnnotation)!)
-            }
-        }
-    }
-
-    func checkLocationAuthorization() {
-        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
-            mapView.showsUserLocation = true
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-        }
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        self.mapView.setRegion(region, animated: true)
+        self.locationManager.stopUpdatingLocation()
     }
     
-
-
-}
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Errors: " + error.localizedDescription)
+    }
+    
+  }

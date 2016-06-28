@@ -36,7 +36,6 @@ class DirectoryServices: AnyObject {
         try! NSFileManager.defaultManager().removeItemAtPath(getImagePath(fileName))
     }
     
- 
     class func imageForPath (string: String) -> UIImage? {
         return UIImage(contentsOfFile: getImagePath(string))
     }

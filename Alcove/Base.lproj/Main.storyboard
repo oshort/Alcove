@@ -55,7 +55,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-T9-1Fj">
                                                     <rect key="frame" x="460" y="8" width="99" height="108"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-J6-Qoo">
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="382"/>
+            <point key="canvasLocation" x="1622" y="-315"/>
         </scene>
         <!--My Spots Detail View Controller-->
         <scene sceneID="xln-yQ-h9e">
@@ -327,12 +327,13 @@
                     <connections>
                         <outlet property="addressLabel" destination="haQ-h7-lgZ" id="1Eg-41-ErR"/>
                         <outlet property="distanceLabel" destination="9pL-7F-rqm" id="OVc-DC-964"/>
+                        <outlet property="spotDetailImage" destination="Ndk-HD-IoY" id="E80-kq-bGf"/>
                         <outlet property="typeLabel" destination="0Mo-hk-pfG" id="05u-aN-cxc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xG-kV-s15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2506" y="-966"/>
+            <point key="canvasLocation" x="2368" y="-315"/>
         </scene>
         <!--New Spots View Controller-->
         <scene sceneID="zm4-dH-pxA">
@@ -349,68 +350,55 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempSpotImage" translatesAutoresizingMaskIntoConstraints="NO" id="8V0-Cb-pBh">
                                 <rect key="frame" x="0.0" y="80" width="600" height="138"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-MI-NvK" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="270" y="302" width="60" height="60"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-MI-NvK" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="270" y="340" width="60" height="60"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="aUO-3X-uRX"/>
                                     <constraint firstAttribute="height" constant="60" id="zky-cT-Lhk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Rkj-Na-7Fb" appends="YES" id="Ta4-Lb-ctd"/>
+                                </connections>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvt-n8-ktu" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="134" y="302" width="60" height="60"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvt-n8-ktu" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="134" y="340" width="60" height="60"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7PF-bO-zkZ"/>
                                     <constraint firstAttribute="width" constant="60" id="tQ0-m8-Mxe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V0V-t9-TOY" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="406" y="302" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="XPa-Dd-Oqr"/>
-                                    <constraint firstAttribute="height" constant="60" id="kQh-Px-02k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hbq-Ss-Vok" appends="YES" id="abf-Zp-B8J"/>
+                                </connections>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CY-hc-SR1">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -462,94 +450,167 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apS-75-gKa" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="338" y="302" width="60" height="60"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apS-75-gKa" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="338" y="340" width="60" height="60"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="sS0-Hg-NBi"/>
                                     <constraint firstAttribute="width" constant="60" id="zkP-Dh-0M1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Lhw-wM-5HL" appends="YES" id="vxb-oh-Oox"/>
+                                </connections>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IXB-NU-KYl" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
-                                <rect key="frame" x="202" y="302" width="60" height="60"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Printing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IXB-NU-KYl" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="202" y="340" width="60" height="60"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="OCu-TW-X5j"/>
                                     <constraint firstAttribute="height" constant="60" id="dff-2A-joH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
-                                        <color key="value" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DC8-AR-KDU" appends="YES" id="zDM-aD-7VW"/>
+                                </connections>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bia-N5-wEa">
+                                <rect key="frame" x="60" y="302" width="480" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9NC-ml-jJe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9NC-ml-jJe"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V0V-t9-TOY" customClass="AlcoveBadge" customModule="Alcove" customModuleProvider="target">
+                                <rect key="frame" x="406" y="340" width="60" height="60"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="XPa-Dd-Oqr"/>
+                                    <constraint firstAttribute="height" constant="60" id="kQh-Px-02k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marcellus-Regular" family="Marcellus" pointSize="17"/>
+                                <color key="textColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="meO-jT-WCU" appends="YES" id="A60-23-5A1"/>
+                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="leading" secondItem="IXB-NU-KYl" secondAttribute="trailing" constant="8" id="015-Ah-ueg"/>
                             <constraint firstItem="0d3-7g-yMG" firstAttribute="centerX" secondItem="uhS-4R-1gn" secondAttribute="centerX" id="0OR-1f-yGB"/>
                             <constraint firstItem="0d3-7g-yMG" firstAttribute="width" secondItem="AQY-Dl-xOi" secondAttribute="width" id="1gz-Cp-da8"/>
                             <constraint firstItem="8V0-Cb-pBh" firstAttribute="leading" secondItem="uhS-4R-1gn" secondAttribute="leadingMargin" constant="-20" id="4bk-mZ-vPf"/>
-                            <constraint firstItem="V0V-t9-TOY" firstAttribute="leading" secondItem="apS-75-gKa" secondAttribute="trailing" constant="8" id="FYm-uT-RXR"/>
-                            <constraint firstItem="jvt-n8-ktu" firstAttribute="top" secondItem="0d3-7g-yMG" secondAttribute="bottom" constant="8" id="IDT-cI-Th6"/>
+                            <constraint firstItem="apS-75-gKa" firstAttribute="leading" secondItem="Aj1-MI-NvK" secondAttribute="trailing" constant="8" id="7JT-uP-UM6"/>
+                            <constraint firstItem="jvt-n8-ktu" firstAttribute="top" secondItem="bia-N5-wEa" secondAttribute="bottom" constant="8" id="7ZC-KE-gu6"/>
+                            <constraint firstItem="V0V-t9-TOY" firstAttribute="top" secondItem="bia-N5-wEa" secondAttribute="bottom" constant="8" id="7eU-UR-IcI"/>
+                            <constraint firstItem="bia-N5-wEa" firstAttribute="centerX" secondItem="uhS-4R-1gn" secondAttribute="centerX" id="Ccd-QE-DHA"/>
+                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="top" secondItem="bia-N5-wEa" secondAttribute="bottom" constant="8" id="FR6-xp-hFo"/>
                             <constraint firstItem="8V0-Cb-pBh" firstAttribute="width" secondItem="8CY-hc-SR1" secondAttribute="width" id="MGC-uV-J4F"/>
                             <constraint firstItem="AQY-Dl-xOi" firstAttribute="width" secondItem="uhS-4R-1gn" secondAttribute="width" multiplier="0.8" id="MyZ-iQ-Vwg"/>
                             <constraint firstItem="8CY-hc-SR1" firstAttribute="leading" secondItem="uhS-4R-1gn" secondAttribute="leadingMargin" constant="-20" id="OCR-LY-3la"/>
-                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="top" secondItem="0d3-7g-yMG" secondAttribute="bottom" constant="8" id="Ogd-wD-arE"/>
                             <constraint firstItem="8V0-Cb-pBh" firstAttribute="height" secondItem="uhS-4R-1gn" secondAttribute="height" multiplier="0.25" id="Q4e-Nu-iJW"/>
                             <constraint firstItem="8V0-Cb-pBh" firstAttribute="centerX" secondItem="uhS-4R-1gn" secondAttribute="centerX" id="Qtl-z6-1j8"/>
                             <constraint firstItem="AQY-Dl-xOi" firstAttribute="top" secondItem="8V0-Cb-pBh" secondAttribute="bottom" constant="8" id="SLs-sB-9P9"/>
                             <constraint firstItem="8CY-hc-SR1" firstAttribute="centerX" secondItem="uhS-4R-1gn" secondAttribute="centerX" id="SRq-Pf-KxZ"/>
-                            <constraint firstItem="V0V-t9-TOY" firstAttribute="top" secondItem="0d3-7g-yMG" secondAttribute="bottom" constant="8" id="Ubq-Qt-Fq4"/>
-                            <constraint firstItem="apS-75-gKa" firstAttribute="top" secondItem="0d3-7g-yMG" secondAttribute="bottom" constant="8" id="VlM-Pm-FAu"/>
-                            <constraint firstItem="IXB-NU-KYl" firstAttribute="leading" secondItem="jvt-n8-ktu" secondAttribute="trailing" constant="8" id="XQo-0S-a2Y"/>
-                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="centerX" secondItem="uhS-4R-1gn" secondAttribute="centerX" id="ZFh-kV-S5q"/>
-                            <constraint firstItem="apS-75-gKa" firstAttribute="leading" secondItem="Aj1-MI-NvK" secondAttribute="trailing" constant="8" id="Zjz-Qc-fLN"/>
+                            <constraint firstItem="apS-75-gKa" firstAttribute="top" secondItem="bia-N5-wEa" secondAttribute="bottom" constant="8" id="ZW8-te-LG3"/>
+                            <constraint firstItem="V0V-t9-TOY" firstAttribute="leading" secondItem="apS-75-gKa" secondAttribute="trailing" constant="8" id="eSn-rC-mZY"/>
                             <constraint firstItem="8V0-Cb-pBh" firstAttribute="top" secondItem="8CY-hc-SR1" secondAttribute="bottom" constant="8" id="fIG-Cx-yGr"/>
                             <constraint firstItem="8CY-hc-SR1" firstAttribute="width" secondItem="uhS-4R-1gn" secondAttribute="width" id="gLs-I2-wGL"/>
+                            <constraint firstItem="IXB-NU-KYl" firstAttribute="top" secondItem="bia-N5-wEa" secondAttribute="bottom" constant="8" id="gh2-01-nx4"/>
+                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="leading" secondItem="IXB-NU-KYl" secondAttribute="trailing" constant="8" id="hrT-lG-uQ8"/>
                             <constraint firstItem="0d3-7g-yMG" firstAttribute="top" secondItem="AQY-Dl-xOi" secondAttribute="bottom" constant="8" id="iMk-Dt-gzb"/>
+                            <constraint firstItem="bia-N5-wEa" firstAttribute="width" secondItem="0d3-7g-yMG" secondAttribute="width" id="igu-cQ-Mct"/>
+                            <constraint firstItem="bia-N5-wEa" firstAttribute="top" secondItem="0d3-7g-yMG" secondAttribute="bottom" constant="8" id="irr-8C-8PV"/>
                             <constraint firstItem="8CY-hc-SR1" firstAttribute="top" secondItem="CSQ-7m-yqj" secondAttribute="bottom" constant="8" id="ma0-p9-g7u"/>
-                            <constraint firstItem="IXB-NU-KYl" firstAttribute="top" secondItem="0d3-7g-yMG" secondAttribute="bottom" constant="8" id="tQs-fz-jSv"/>
-                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="leading" secondItem="uhS-4R-1gn" secondAttribute="leadingMargin" constant="40" id="vpa-J9-rpO"/>
+                            <constraint firstItem="IXB-NU-KYl" firstAttribute="leading" secondItem="jvt-n8-ktu" secondAttribute="trailing" constant="8" id="qPf-SB-HLz"/>
+                            <constraint firstItem="Aj1-MI-NvK" firstAttribute="centerX" secondItem="uhS-4R-1gn" secondAttribute="centerX" id="voZ-9C-G2F"/>
                             <constraint firstItem="AQY-Dl-xOi" firstAttribute="centerX" secondItem="uhS-4R-1gn" secondAttribute="centerX" id="ysn-7w-Vaa"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="vpa-J9-rpO"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="newSpotAddressTextField" destination="0d3-7g-yMG" id="VQq-Ae-zzG"/>
+                        <outlet property="newSpotCoffeeLabel" destination="jvt-n8-ktu" id="V5k-n4-5fh"/>
+                        <outlet property="newSpotGroupLabel" destination="V0V-t9-TOY" id="aGg-zq-P7e"/>
                         <outlet property="newSpotImage" destination="8V0-Cb-pBh" id="3wA-mR-pLH"/>
                         <outlet property="newSpotNameTextField" destination="AQY-Dl-xOi" id="eYl-s1-OZj"/>
+                        <outlet property="newSpotNoiseLabel" destination="apS-75-gKa" id="UkM-Nt-2YO"/>
+                        <outlet property="newSpotPrintingLabel" destination="IXB-NU-KYl" id="s2U-Se-Zbm"/>
+                        <outlet property="newSpotTypeField" destination="bia-N5-wEa" id="rl7-YY-XQZ"/>
                         <outlet property="newSpotWifiLabel" destination="Aj1-MI-NvK" id="mGN-hP-uQn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrY-LX-H0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hbq-Ss-Vok">
+                    <connections>
+                        <action selector="coffeeLabelTapped:" destination="U15-nH-5H6" id="JdK-Jc-txE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="DC8-AR-KDU">
+                    <connections>
+                        <action selector="printingLabelTapped:" destination="U15-nH-5H6" id="qi8-uA-r68"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Rkj-Na-7Fb">
+                    <connections>
+                        <action selector="wifiLabelTapped:" destination="U15-nH-5H6" id="VQi-7x-boG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Lhw-wM-5HL">
+                    <connections>
+                        <action selector="quietLabelTapped:" destination="U15-nH-5H6" id="sXc-Hf-Hiw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="meO-jT-WCU">
+                    <connections>
+                        <action selector="groupLabelTapped:" destination="U15-nH-5H6" id="Qf5-bW-aue"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2032" y="1105.5"/>
+            <point key="canvasLocation" x="1744" y="605.5"/>
         </scene>
         <!--Map-->
         <scene sceneID="wg7-f3-ORb">
@@ -578,6 +639,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mDr-KC-z65">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
+                                                <action selector="getCurrentLocation:" destination="8rJ-Kc-sve" id="QgA-Ju-3NE"/>
                                                 <segue destination="U15-nH-5H6" kind="show" id="rpS-tB-6nh"/>
                                             </connections>
                                         </barButtonItem>
@@ -600,7 +662,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Image" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="mapView" destination="37q-kx-0Lm" id="sL5-F9-buz"/>
+                        <outlet property="mapView" destination="37q-kx-0Lm" id="aPU-QR-mUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -667,7 +729,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCC-oZ-l26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="1232"/>
+            <point key="canvasLocation" x="-5" y="856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -781,7 +843,7 @@
         <image name="tempSpotImage" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u30-6v-B1Q"/>
+        <segue reference="rpS-tB-6nh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.086274509799999996" green="0.28627450980000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

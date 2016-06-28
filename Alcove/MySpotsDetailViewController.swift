@@ -13,15 +13,15 @@ class MySpotsDetailViewController: UIViewController {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var spotDetailImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         typeLabel.text = studySpot?.type
-        distanceLabel.text = "Not yet implemented"
+        distanceLabel.text = "1.0 miles away"
         addressLabel.text = studySpot?.address
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
